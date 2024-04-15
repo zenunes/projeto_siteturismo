@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 15px;
+
+}
+
+header {
+    background-color: #000;
+
+}
+
+.header {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logoimg {
+    width: 80px;
+    height: 80px;
+    background-color: #FDAF2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MENU DO HEADER */
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    border-bottom: 5px solid #000;
+
+}
+
+.menu li a:hover {
+    border-bottom: 5px solid #FDAF2D;
+    color: #999;
+}
+
+.menu .active a {
+    border-bottom: 5px solid #FDAF2D;
+    color: #999;
+}
+
+/* SLIDERSHOW */
+
+.sliders {
+    height: calc(80vh - 100px);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.slider--width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.5s;
+}
+
+.slide--item {
+    flex: 1;
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.slider-controls {
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.slider-controls .slide-control img {
+    width: 60px;
+    height: 60px;
+
+}
+
+
+.slider-controls .slide-control {
+    width: 60px;
+    height: 100px;
+    background: #999;
+    display: flex;
+    align-items: center;
+    margin: 0 1% 0 1%;
+    border-radius: 10%;
+}
+
+.slider-controls .slide-control:hover {
+    background-color: #777676;
+}
+
+
+.slider--width .item-container {
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    flex-direction: column;
+
+
+}
+
+.slider--width .item-container h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Artifika', Arial, Helvetica, sans-serif;
+}
+
+.slider--width .item-container p {
+    color: #ccc;
+    font-size: 18px;
+
+}
+
+.slide--item .bg-escuro {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+
+.slider-indicators {
+    width: 100vw;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+
+}
+
+.indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #FDAF2D;
+}
+
+/* Seção 1 */
+
+.default,
+.default-2 {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    font-weight: 600;
+}
+
+.default .section-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.default .section-desc {
+    max-width: 1140px;
+    margin: auto;
+    color: #777676;
+    margin-bottom: 20px;
+}
+
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+    min-width: 100px;
+
+}
+
+.section-destaque {
+    overflow: hidden;
+}
+
+.section-destaque .slides {
+    display: flex;
+}
+
+.section-destaque .slide {
+    flex: 1;
+    margin-right: 20px;
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+}
+.section-destaque .slide:last-child{
+    margin-right:0px;
+}
+
+.section-destaque .slidearea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.section-destaque .slidearea img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+}
+.section-destaque .destaque-title{
+    display: flex;
+    justify-content: center;
+}
+.section-destaque .destaque-title h1{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.section-destaque .slide-desc{
+    text-align: justify;
+}
+
+.default-2 .section-body{
+    max-width: 1140px;
+    margin: auto;
+    min-width: 100px;
+}
+.default-2 .section-containers{
+    display: flex;
+}
+.default-2 .container{
+    flex: 1;
+    justify-content: center;
+    margin-right: 20px;
+    
+}
+.default-2 .container:last-child{
+    margin-right: 0px;
+}
+.default-2 .container-right img{
+    width: 100%;
+    height: 500px;
+    box-shadow: 0px 5px 10px #133313;
+}
+
+.default-2 .left-title{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.default-2 .left-desc{
+   color: #777676;
+}
