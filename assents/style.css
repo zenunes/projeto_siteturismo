@@ -307,3 +307,13 @@ header {
 .default-2 .left-desc{
    color: #777676;
 }
+
+.default-2 .container-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.default-2 .container-info h3{
+    margin-bottom: 10px;
+}
