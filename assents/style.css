@@ -114,7 +114,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -224,7 +224,8 @@ header {
     margin-bottom: 20px;
 }
 
-.default .section-body {
+.default .section-body,
+.default-2 .section-body {
     max-width: 1140px;
     margin: auto;
     min-width: 100px;
@@ -247,73 +248,180 @@ header {
     min-height: 300px;
     display: inline-block;
 }
-.section-destaque .slide:last-child{
-    margin-right:0px;
+
+.section-destaque .slide:last-child {
+    margin-right: 0px;
 }
 
 .section-destaque .slidearea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
-.section-destaque .slidearea img{
+
+.section-destaque .slidearea img {
     width: 100%;
     height: 300px;
     margin-bottom: 40px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
 }
-.section-destaque .destaque-title{
+
+.section-destaque .destaque-title {
     display: flex;
     justify-content: center;
 }
-.section-destaque .destaque-title h1{
+
+.section-destaque .destaque-title h1 {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.section-destaque .slide-desc{
+
+.section-destaque .slide-desc {
     text-align: justify;
 }
 
-.default-2 .section-body{
-    max-width: 1140px;
-    margin: auto;
-    min-width: 100px;
-}
-.default-2 .section-containers{
+
+.default-2 .section-containers {
     display: flex;
 }
-.default-2 .container{
+
+.default-2 .container {
     flex: 1;
     justify-content: center;
     margin-right: 20px;
-    
+
 }
-.default-2 .container:last-child{
+
+.default-2 .container:last-child {
     margin-right: 0px;
 }
-.default-2 .container-right img{
+
+.default-2 .container-right img {
     width: 100%;
     height: 500px;
     box-shadow: 0px 5px 10px #133313;
 }
 
-.default-2 .left-title{
+.default-2 .left-title {
     font-weight: 600;
     font-size: 25px;
     margin-bottom: 20px;
 }
-.default-2 .left-desc{
-   color: #777676;
+
+.default-2 .left-desc {
+    color: #777676;
 }
 
-.default-2 .container-info{
+.default-2 .container-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
-.default-2 .container-info h3{
+
+.default-2 .container-info h3 {
     margin-bottom: 10px;
+}
+
+
+/* SLIDE FOTOS */
+
+.bg-slide {
+    background-image: url('./image/bg-slide.jpg');
+    background-size: cover;
+    background-position: bottom;
+    padding: 0px;
+
+}
+
+.section-slide {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.slides--colection{
+    display: flex;
+    overflow: hidden;
+    max-width: 1020px;
+    margin: auto;
+    height: 300px;
+
+}
+
+.slides--colection .slider--colection {
+    width: 2080px;
+    height: 100%;
+    transition: all ease 0.5s;
+    display: flex;
+}
+
+
+.slides--colection .slide--colection {
+    width: 260px;
+    height: 300px;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.slides--colection .slider-controls-colection {
+    position: absolute;
+    z-index: 99;
+    width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.9;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slides--colection .slider-controls-colection .slide-control-colection img {
+    width: 50px;
+    height: 60px;
+
+}
+
+
+.slides--colection .slider-controls-colection .slide-control-colection {
+    width: 50px;
+    height: 80px;
+    background: #999;
+    display: flex;
+    align-items: center;
+    margin:0;
+    border-radius: 10%;
+}
+
+.slider-controls-colection .slide-control-colection:hover {
+    background-color: #777676;
+    
+}
+
+/* SECTION LOCALIZAÇÃO */
+
+.default .section-map{
+    display: flex;
+   
+    
+
+
+}
+.default .section-map .map-slide{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.default .map-slide .map-title{
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+ font-size: 15px;
+}
+.default .map-slide .map-title button{
+    font-size: 15px;
+    
 }
