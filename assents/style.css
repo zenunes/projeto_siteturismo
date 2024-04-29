@@ -410,18 +410,118 @@ header {
 
 
 }
-.default .section-map .map-slide{
+.default .section-map .map-slide-right,
+.default .section-map .map-slide-left{
     flex: 1;
-    margin-right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
-
-.default .map-slide .map-title{
+.default .section-map .map-slide-left{
+    margin-right: 30px;
+}
+.default .section-map .map-slide-right{
+    margin-left: 30px;
+}
+.default .map-slide-left .map-title,
+.default .map-slide-right .map-title{
  display: flex;
  justify-content: center;
  margin-top: 20px;
  font-size: 15px;
 }
-.default .map-slide .map-title button{
+.default .section-map .button{
     font-size: 15px;
+    display: inline-flex;
+    background-color: #FDAF2D;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
     
+}
+
+.default .section-map i{
+    margin-left: 10px;
+    
+    
+}
+
+/* FOOTER */
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.footer .section-body {
+    max-width: 1140px;
+    margin: auto;
+    min-width: 100px;
+}
+.footer .footer-borda{
+    width: 1400px;
+    margin: auto;
+    height: 100%;
+    border: 1px solid #fff;
+}
+.footer .footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    
+}
+
+.footer-logo .logo{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.footer-left .footer-icon{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+}
+.footer-icon i{
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+.footer-container .footer-right{
+    width: 400px;
+    height: 380px;
+}
+.footer-right .title{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-right .desc{
+    text-align: justify;
+}
+
+.footer .footer-direito{
+    width: 1400px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+}
+.footer-direito .direito-container{
+    display: flex;
+    justify-content: space-between;
+}
+.direito-container .termo{
+    display: flex;
+
+}
+.direito-container .termo p{
+    margin-right: 10px;
+    cursor: pointer;
 }
