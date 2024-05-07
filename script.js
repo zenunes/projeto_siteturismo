@@ -9,8 +9,27 @@ document.querySelector('.slider-controls').style.height = `${document.querySelec
 
 document.querySelector('.slider-controls-colection').style.height = `${document.querySelector('.slides--colection').clientHeight}px`;
 
-// gerador de indicadores de slides
 
+// Seletor
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu nav ul li a');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Evita o comportamento padrão do link
+            e.preventDefault();
+
+            // Remove a classe 'active' de todos os itens
+            document.querySelectorAll('.menu nav ul li').forEach(li => {
+                li.classList.remove('active');
+            });
+
+            // Adiciona a classe 'active' ao <li> pai do <a> clicado
+            this.parentNode.classList.add('active');
+        });
+    });
+});
+// gerador de indicadores de slides
 let indicatorsContainer = document.querySelector('.slider-indicators');
 for (let i = 0; i < totalslide; i++) {
     let indicator = document.createElement('span');
@@ -55,27 +74,24 @@ function goNext() {
     updateMargin();
     updateIndicators();
 }
-
 // atualizando a margem para mostrar o slide atual
 function updateMargin() {
     let sliderItemWidth = document.querySelector('.slide--item').clientWidth;
     let newMargin = (currentSlide * sliderItemWidth);
     document.querySelector('.slider--width').style.marginLeft = `-${newMargin}px`;
-
-
 }
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.slider--colection');
     const slidesColetion = document.querySelectorAll('.slide--colection');
 
     let currentIndex = 0;
-    // window estão sendo definidos para garantir 
-    // que estas funções estejam acessíveis globalmente, 
-    // o que é necessário quando você usa onclick diretamente nos elementos HTML
+
+    // Calcula a largura total dos slides
+    const slideWidth = slidesColetion.length * 260; // 260 é o tamanho de cada slide
+    // Define a largura máxima do slider container
+    sliderContainer.style.maxWidth = `${slideWidth}px`;
+    // Defina a posição inicial do slider
+    updateSlidePosition();
     window.prevSlide = function () {
         currentIndex--;
         if (currentIndex < 0) {
@@ -83,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         updateSlidePosition();
     }
+
     window.nextSlide = function () {
         currentIndex++;
         if (currentIndex > slidesColetion.length - 4) {
@@ -90,13 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         updateSlidePosition();
     }
-
     function updateSlidePosition() {
-
         sliderContainer.style.transform = `translateX(-${currentIndex * 260}px)`;
     }
+    // Altera a largura máxima do contêiner do slider se a janela for redimensionada
+    window.addEventListener('resize', function () {
+        const slideWidth = slidesColetion.length * 260;
+        sliderContainer.style.maxWidth = `${slideWidth}px`;
+    });
+    // Define o intervalo de troca de slides
     setInterval(nextSlide, 5000);
 });
 
-// configurando o avanço automatico dos slides
-setInterval(goNext, 5000); 

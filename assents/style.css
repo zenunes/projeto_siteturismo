@@ -4,11 +4,14 @@
     box-sizing: border-box;
 
 }
+html{
+    font-size: 62.5%;
+}
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    font-size: 15px;
+    font-size: 1.5rem;
 
 }
 
@@ -30,8 +33,8 @@ header {
 }
 
 .logoimg {
-    width: 80px;
-    height: 80px;
+    width: 8.0rem;
+    height: 8.0rem;
     background-color: #FDAF2D;
     display: flex;
     justify-content: center;
@@ -62,8 +65,8 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 100px;
     border-bottom: 5px solid #000;
 
@@ -74,7 +77,8 @@ header {
     color: #999;
 }
 
-.menu .active a {
+
+.menu .active a{
     border-bottom: 5px solid #FDAF2D;
     color: #999;
 }
@@ -119,15 +123,15 @@ header {
 }
 
 .slider-controls .slide-control img {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
 
 }
 
 
 .slider-controls .slide-control {
-    width: 60px;
-    height: 100px;
+    width: 6rem;
+    height: 10rem;
     background: #999;
     display: flex;
     align-items: center;
@@ -150,9 +154,9 @@ header {
 }
 
 .slider--width .item-container h1 {
-    font-size: 60px;
+    font-size: 6rem;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-family: 'Artifika', Arial, Helvetica, sans-serif;
 }
 
@@ -172,20 +176,20 @@ header {
 .slider-indicators {
     width: 100vw;
     position: absolute;
-    bottom: 10px;
+    bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 
 }
 
 .indicator {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     background-color: #999;
     margin: 0 5px;
@@ -201,8 +205,10 @@ header {
 .default,
 .default-2 {
     background-color: #fff;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 10rem;
+}
+#section-img {
+    margin-top: 10rem;
 }
 
 .default .section-title,
@@ -212,16 +218,16 @@ header {
 }
 
 .default .section-title {
-    font-size: 30px;
+    font-size: 3rem;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .default .section-desc {
     max-width: 1140px;
     margin: auto;
     color: #777676;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .default .section-body,
@@ -242,7 +248,7 @@ header {
 
 .section-destaque .slide {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 2rem;
     width: 280px;
     height: 100%;
     min-height: 300px;
@@ -263,7 +269,7 @@ header {
 .section-destaque .slidearea img {
     width: 100%;
     height: 300px;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
 }
@@ -275,7 +281,7 @@ header {
 
 .section-destaque .destaque-title h1 {
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .section-destaque .slide-desc {
@@ -290,7 +296,7 @@ header {
 .default-2 .container {
     flex: 1;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 2rem;
 
 }
 
@@ -300,14 +306,15 @@ header {
 
 .default-2 .container-right img {
     width: 100%;
-    height: 500px;
+    height: 50rem;
     box-shadow: 0px 5px 10px #133313;
 }
 
 .default-2 .left-title {
     font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 .default-2 .left-desc {
@@ -318,11 +325,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .default-2 .container-info h3 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 
@@ -338,8 +345,8 @@ header {
 
 .section-slide {
     background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .slides--colection{
@@ -347,7 +354,7 @@ header {
     overflow: hidden;
     max-width: 1020px;
     margin: auto;
-    height: 300px;
+    height: 30rem;
 
 }
 
@@ -362,7 +369,7 @@ header {
 .slides--colection .slide--colection {
     width: 260px;
     height: 300px;
-    margin-right: 20px;
+    margin-right: 2rem;
     background-size: cover;
     background-position: center;
 
@@ -387,8 +394,8 @@ header {
 
 
 .slides--colection .slider-controls-colection .slide-control-colection {
-    width: 50px;
-    height: 80px;
+    width: 5rem;
+    height: 8rem;
     background: #999;
     display: flex;
     align-items: center;
@@ -420,33 +427,33 @@ header {
     
 }
 .default .section-map .map-slide-left{
-    margin-right: 30px;
+    margin-right: 3rem;
 }
 .default .section-map .map-slide-right{
-    margin-left: 30px;
+    margin-left: 3rem;
 }
 .default .map-slide-left .map-title,
 .default .map-slide-right .map-title{
  display: flex;
  justify-content: center;
- margin-top: 20px;
- font-size: 15px;
+ margin-top: 2rem;
+ font-size: 1.5rem;
 }
 .default .section-map .button{
-    font-size: 15px;
+    font-size: 1.5rem;
     display: inline-flex;
     background-color: #FDAF2D;
     color: #000;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 2rem;
     padding: 10px 30px;
-    margin-top: 20px;
+    margin-top: 2rem;
     
 }
 
 .default .section-map i{
-    margin-left: 10px;
+    margin-left: 1rem;
     
     
 }
@@ -455,7 +462,7 @@ header {
 .footer{
     background-color: #000;
     color: #fff;
-    padding-top: 30px;
+    padding-top: 3rem;
 }
 
 .footer .section-body {
@@ -472,34 +479,35 @@ header {
 .footer .footer-container{
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
+    padding-top: 10rem;
     
 }
 
 .footer-logo .logo{
-    width: 300px;
-    height: 300px;
+    width: 30rem;
+    height: 30rem;
     background-color: #fff;
 }
 
 .footer-left .footer-icon{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 
 }
 .footer-icon i{
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     
 }
 
 .footer-container .footer-right{
     width: 400px;
-    height: 380px;
+    height: 3.8rem;
 }
 .footer-right .title{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -522,6 +530,37 @@ header {
 
 }
 .direito-container .termo p{
-    margin-right: 10px;
+    margin-right: 1rem;
     cursor: pointer;
+}
+
+
+/* RESPONSIVIDADE - TABLET 1 */
+
+@media (min-width:450px ) and (max-width:800px){
+
+    .nav{
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 1);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    /* .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 120px;
+        font-size: 20px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu li.active a{
+        color: #FDAF2D;
+        border: 0;
+    }
+  */
 }
