@@ -21,7 +21,7 @@ header {
 }
 
 .header {
-    max-width: 1140px;
+    max-width: 114rem;
     height: 100px;
     margin: auto;
     display: flex;
@@ -86,7 +86,7 @@ header {
 /* SLIDERSHOW */
 
 .sliders {
-    height: calc(80vh - 100px);
+    height: calc(80vh - 10rem);
     display: flex;
     overflow: hidden;
     position: relative;
@@ -146,7 +146,7 @@ header {
 
 .slider--width .item-container {
     display: flex;
-    max-width: 1140px;
+    max-width: 114rem;
     margin: auto;
     flex-direction: column;
 
@@ -162,7 +162,7 @@ header {
 
 .slider--width .item-container p {
     color: #ccc;
-    font-size: 18px;
+    font-size: 1.8rem;
 
 }
 
@@ -224,7 +224,7 @@ header {
 }
 
 .default .section-desc {
-    max-width: 1140px;
+    max-width: 114rem;
     margin: auto;
     color: #777676;
     margin-bottom: 2rem;
@@ -232,9 +232,9 @@ header {
 
 .default .section-body,
 .default-2 .section-body {
-    max-width: 1140px;
+    max-width: 114rem;
     margin: auto;
-    min-width: 100px;
+    min-width: 10rem;
 
 }
 
@@ -344,6 +344,7 @@ header {
 }
 
 .section-slide {
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -352,14 +353,13 @@ header {
 .slides--colection{
     display: flex;
     overflow: hidden;
-    max-width: 1020px;
+    max-width: 102rem;
     margin: auto;
     height: 30rem;
 
 }
 
 .slides--colection .slider--colection {
-    width: 2080px;
     height: 100%;
     transition: all ease 0.5s;
     display: flex;
@@ -378,7 +378,7 @@ header {
 .slides--colection .slider-controls-colection {
     position: absolute;
     z-index: 99;
-    width: 1020px;
+    width: calc(4 * 25.5rem);
     display: flex;
     justify-content: space-between;
     opacity: 0.9;
@@ -413,14 +413,11 @@ header {
 .default .section-map{
     display: flex;
    
-    
-
-
 }
 .default .section-map .map-slide-right,
 .default .section-map .map-slide-left{
     flex: 1;
-    display: inline-flex;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -428,6 +425,11 @@ header {
 }
 .default .section-map .map-slide-left{
     margin-right: 3rem;
+}
+.map-slide-right img,
+.map-slide-left img{
+    width: 100%;
+    height: 100%;
 }
 .default .section-map .map-slide-right{
     margin-left: 3rem;
@@ -466,12 +468,12 @@ header {
 }
 
 .footer .section-body {
-    max-width: 1140px;
+    max-width: 114rem;
     margin: auto;
-    min-width: 100px;
+    min-width: 10rem;
 }
 .footer .footer-borda{
-    width: 1400px;
+    width: 80%;
     margin: auto;
     height: 100%;
     border: 1px solid #fff;
@@ -480,6 +482,9 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 10rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 4rem; 
     
 }
 
@@ -488,7 +493,9 @@ header {
     height: 30rem;
     background-color: #fff;
 }
-
+.footer-container .footer-left{
+    margin-right: 1.5rem;
+}
 .footer-left .footer-icon{
     display: flex;
     justify-content: space-around;
@@ -503,8 +510,9 @@ header {
 }
 
 .footer-container .footer-right{
-    width: 400px;
-    height: 3.8rem;
+    width: 40rem;
+    
+    margin-left: 1.5rem;
 }
 .footer-right .title{
     margin-bottom: 2rem;
@@ -514,10 +522,11 @@ header {
 }
 .footer-right .desc{
     text-align: justify;
+    
 }
 
 .footer .footer-direito{
-    width: 1400px;
+    width: 80%;
     margin: auto;
     padding: 10px 0 10px 0;
 }
@@ -537,30 +546,8 @@ header {
 
 /* RESPONSIVIDADE - TABLET 1 */
 
-@media (min-width:450px ) and (max-width:800px){
-
-    .nav{
-        position: absolute;
-        z-index: 99;
-        background-color: rgba(0, 0, 0, 1);
-        width: 70vw;
-        height: calc(100vh - 100px);
-        top: 100px;
-        right: 0;
+@media (max-width: 1030px) {
+    .slides--colection .slider-controls-colection{
+        display: none;
     }
-    /* .menu ul{
-        flex-direction: column;
-    }
-    .menu li a{
-        font-weight: bold;
-        height: 120px;
-        font-size: 20px;
-        margin-left: 50px;
-        border: 0;
-    }
-    .menu li.active a{
-        color: #FDAF2D;
-        border: 0;
-    }
-  */
 }
