@@ -125,14 +125,14 @@ header {
 .slider-controls .slide-control img {
     width: 6rem;
     height: 6rem;
-
+    
 }
 
 
 .slider-controls .slide-control {
     width: 6rem;
     height: 10rem;
-    background: #999;
+    background: #ffffff;
     display: flex;
     align-items: center;
     margin: 0 1% 0 1%;
@@ -140,15 +140,16 @@ header {
 }
 
 .slider-controls .slide-control:hover {
-    background-color: #777676;
+    background-color:#FDAF2D;
 }
 
 
 .slider--width .item-container {
     display: flex;
-    max-width: 114rem;
+    max-width: 60%;
     margin: auto;
     flex-direction: column;
+    
 
 
 }
@@ -206,6 +207,8 @@ header {
 .default-2 {
     background-color: #fff;
     margin-bottom: 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 #section-img {
     margin-top: 10rem;
@@ -340,6 +343,8 @@ header {
     background-size: cover;
     background-position: bottom;
     padding: 0px;
+    margin-left: 0rem;
+    margin-right: 0rem;
 
 }
 
@@ -387,8 +392,8 @@ header {
 }
 
 .slides--colection .slider-controls-colection .slide-control-colection img {
-    width: 50px;
-    height: 60px;
+    width: 5rem;
+    height: 5rem;
 
 }
 
@@ -396,7 +401,7 @@ header {
 .slides--colection .slider-controls-colection .slide-control-colection {
     width: 5rem;
     height: 8rem;
-    background: #999;
+    background: #fff;
     display: flex;
     align-items: center;
     margin:0;
@@ -404,7 +409,7 @@ header {
 }
 
 .slider-controls-colection .slide-control-colection:hover {
-    background-color: #777676;
+    background-color: #FDAF2D;
     
 }
 
@@ -473,7 +478,7 @@ header {
     min-width: 10rem;
 }
 .footer .footer-borda{
-    width: 80%;
+    width: 90%;
     margin: auto;
     height: 100%;
     border: 1px solid #fff;
@@ -526,7 +531,7 @@ header {
 }
 
 .footer .footer-direito{
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 10px 0 10px 0;
 }
@@ -549,5 +554,31 @@ header {
 @media (max-width: 1030px) {
     .slides--colection .slider-controls-colection{
         display: none;
+    }
+}
+
+@media (max-width: 1010px){
+    .slides--colection{
+        max-width: 76rem;
+    }
+    .default-2 .section-containers{
+        flex-direction: column;
+    }
+    .default-2 .section-containers.reverse{
+        flex-direction: column-reverse;
+    }
+    .default-2 .container{
+        margin-right: 0;
+    }
+    .container-right{
+        display: flex;
+        margin-top: 2rem;
+
+    }
+    .default-2 .container-right img{
+        width: 60rem;
+        height: 40rem;
+        margin: auto;
+        
     }
 }

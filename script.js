@@ -11,11 +11,11 @@ document.querySelector('.slider-controls-colection').style.height = `${document.
 
 
 // Seletor
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuItems = document.querySelectorAll('.menu nav ul li a');
 
     menuItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             // Evita o comportamento padrão do link
             // e.preventDefault();
 
@@ -80,6 +80,7 @@ function updateMargin() {
     let newMargin = (currentSlide * sliderItemWidth);
     document.querySelector('.slider--width').style.marginLeft = `-${newMargin}px`;
 }
+setInterval(goNext, 5000);
 document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.slider--colection');
     const slidesColetion = document.querySelectorAll('.slide--colection');
@@ -118,4 +119,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define o intervalo de troca de slides
     setInterval(nextSlide, 5000);
 });
-
