@@ -12,9 +12,10 @@ html{
 :root{
     --color-orange:#FDAF2D;
     --color-black:#000;
-    --color-gray:#999;
-    --color-graylite:#ccc;
+    --color-gray:#a3a3a3;
+    --color-des:#000;
     --color-white:#fff;
+
 }
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -170,7 +171,7 @@ header {
 }
 
 .slider--width .item-container p {
-    color: var(--color-graylite);
+    color: var(--color-white);
     font-size: 1.8rem;
 
 }
@@ -200,7 +201,7 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: var(--color-gray);
+    background-color: var(--color-white);
     margin: 0 5px;
     cursor: pointer;
 }
@@ -297,6 +298,8 @@ header {
 
 .section-destaque .slide-desc {
     text-align: justify;
+    font-size: 1.7rem;
+    color:var(--color-des);
 }
 
 
@@ -329,7 +332,8 @@ header {
 }
 
 .default-2 .left-desc {
-    color: var(--color-gray);
+    color: var(--color-des);
+    font-size: 2rem;
 }
 
 .default-2 .container-info {
@@ -457,7 +461,7 @@ header {
  font-size: 1.5rem;
 }
 .default .section-map .button{
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: inline-flex;
     background-color: var(--color-orange);
     color: var(--color-black);

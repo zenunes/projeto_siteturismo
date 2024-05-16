@@ -80,7 +80,10 @@ function updateMargin() {
     let newMargin = (currentSlide * sliderItemWidth);
     document.querySelector('.slider--width').style.marginLeft = `-${newMargin}px`;
 }
+ // Define o intervalo de troca de slide
 setInterval(goNext, 5000);
+
+// slideshow das fotos do meio do site
 document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.slider--colection');
     const slidesColetion = document.querySelectorAll('.slide--colection');
