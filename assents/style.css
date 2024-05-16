@@ -5,9 +5,17 @@
 
 }
 html{
+    scroll-behavior: smooth;
+    /* faz uma rolagem suavem, porem não funciona em todos os navegadores */
     font-size: 62.5%;
 }
-
+:root{
+    --color-orange:#FDAF2D;
+    --color-black:#000;
+    --color-gray:#999;
+    --color-graylite:#ccc;
+    --color-white:#fff;
+}
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -16,7 +24,7 @@ body {
 }
 
 header {
-    background-color: #000;
+    background-color: var(--color-black);
 
 }
 
@@ -35,7 +43,7 @@ header {
 .logoimg {
     width: 8.0rem;
     height: 8.0rem;
-    background-color: #FDAF2D;
+    background-color: var(--color-orange);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +67,7 @@ header {
 }
 
 .menu li a {
-    color: #fff;
+    color: var(--color-white);
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
@@ -73,14 +81,14 @@ header {
 }
 
 .menu li a:hover {
-    border-bottom: 5px solid #FDAF2D;
-    color: #999;
+    border-bottom: 5px solid var(--color-orange);
+    color: var(--color-gray);
 }
 
 
 .menu .active a{
-    border-bottom: 5px solid #FDAF2D;
-    color: #999;
+    border-bottom: 5px solid var(--color-orange);
+    color: var(--color-gray);
 }
 
 /* SLIDERSHOW */
@@ -132,7 +140,7 @@ header {
 .slider-controls .slide-control {
     width: 6rem;
     height: 10rem;
-    background: #ffffff;
+    background: var(--color-white);
     display: flex;
     align-items: center;
     margin: 0 1% 0 1%;
@@ -140,7 +148,7 @@ header {
 }
 
 .slider-controls .slide-control:hover {
-    background-color:#FDAF2D;
+    background-color:var(--color-orange);
 }
 
 
@@ -156,13 +164,13 @@ header {
 
 .slider--width .item-container h1 {
     font-size: 6rem;
-    color: #fff;
+    color: var(--color-white);
     margin-bottom: 1rem;
     font-family: 'Artifika', Arial, Helvetica, sans-serif;
 }
 
 .slider--width .item-container p {
-    color: #ccc;
+    color: var(--color-graylite);
     font-size: 1.8rem;
 
 }
@@ -192,20 +200,20 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: #999;
+    background-color: var(--color-gray);
     margin: 0 5px;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color: #FDAF2D;
+    background-color: var(--color-orange);
 }
 
 /* Seção 1 */
 
 .default,
 .default-2 {
-    background-color: #fff;
+    background-color: var(--color-white);
     margin-bottom: 10rem;
     margin-left: 10rem;
     margin-right: 10rem;
@@ -229,7 +237,7 @@ header {
 .default .section-desc {
     max-width: 114rem;
     margin: auto;
-    color: #777676;
+    color: var(--color-graylite);
     margin-bottom: 2rem;
 }
 
@@ -252,9 +260,9 @@ header {
 .section-destaque .slide {
     flex: 1;
     margin-right: 2rem;
-    width: 280px;
+    width: 28rem;
     height: 100%;
-    min-height: 300px;
+    min-height: 30rem;
     display: inline-block;
 }
 
@@ -271,7 +279,7 @@ header {
 
 .section-destaque .slidearea img {
     width: 100%;
-    height: 300px;
+    height: 30rem;
     margin-bottom: 4rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
@@ -321,7 +329,7 @@ header {
 }
 
 .default-2 .left-desc {
-    color: #777676;
+    color: var(--color-gray);
 }
 
 .default-2 .container-info {
@@ -401,15 +409,17 @@ header {
 .slides--colection .slider-controls-colection .slide-control-colection {
     width: 5rem;
     height: 8rem;
-    background: #fff;
+    background: var(--color-white);
     display: flex;
     align-items: center;
     margin:0;
     border-radius: 10%;
 }
-
+.slides--colection .slider-controls-colection .slide-control-colection:hover{
+    border: 1.5px solid var(--color-black);
+}
 .slider-controls-colection .slide-control-colection:hover {
-    background-color: #FDAF2D;
+    background-color: var(--color-orange);
     
 }
 
@@ -449,8 +459,8 @@ header {
 .default .section-map .button{
     font-size: 1.5rem;
     display: inline-flex;
-    background-color: #FDAF2D;
-    color: #000;
+    background-color: var(--color-orange);
+    color: var(--color-black);
     text-decoration: none;
     font-weight: 600;
     border-radius: 2rem;
@@ -467,8 +477,8 @@ header {
 
 /* FOOTER */
 .footer{
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-black);
+    color: var(--color-white);
     padding-top: 3rem;
 }
 
@@ -481,7 +491,7 @@ header {
     width: 90%;
     margin: auto;
     height: 100%;
-    border: 1px solid #fff;
+    border: 1px solid var(--color-white);
 }
 .footer .footer-container{
     display: flex;
@@ -496,7 +506,7 @@ header {
 .footer-logo .logo{
     width: 30rem;
     height: 30rem;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 .footer-container .footer-left{
     margin-right: 1.5rem;
@@ -508,9 +518,9 @@ header {
     margin-bottom: 2rem;
 
 }
-.footer-icon i{
-    color: #fff;
-    font-size: 3rem;
+.footer-icon img{
+    width: 4rem;
+    height: 4rem;
     
 }
 
