@@ -5,7 +5,7 @@ let currentSlide = 0;
 let sliderWidth = document.querySelector('.slider--width').style.width = `calc(100vw * ${totalslide}`;
 
 // ajustando a altura dos controles de slides - centralizar eles
-document.querySelector('.slider-controls').style.height = `${document.querySelector('.sliders').clientHeight}px`;
+// document.querySelector('.slider-controls').style.height = `${document.querySelector('.sliders').clientHeight}px`;
 
 document.querySelector('.slider-controls-colection').style.height = `${document.querySelector('.slides--colection').clientHeight}px`;
 
