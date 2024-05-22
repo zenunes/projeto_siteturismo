@@ -15,17 +15,21 @@ html{
     --color-gray:#a3a3a3;
     --color-des:#000;
     --color-white:#fff;
+    --color-section: #f2f2f2;
 
 }
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     font-size: 1.5rem;
+    
 
 }
 
 header {
-    background-color: var(--color-black);
+    background: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    
 
 }
 
@@ -55,7 +59,8 @@ header {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    color: #fff;
+    color: var(--color-black);
+    
 }
 
 .menu ul,
@@ -77,28 +82,32 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     height: 100px;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid #00000000;
 
 }
 
 .menu li a:hover {
     border-bottom: 5px solid var(--color-orange);
-    color: var(--color-gray);
+    color: var(--color-orange);
 }
 
 
 .menu .active a{
     border-bottom: 5px solid var(--color-orange);
-    color: var(--color-gray);
+    color: var(--color-orange);
 }
 
 /* SLIDERSHOW */
+/* BANNER */
+
 
 .sliders {
-    height: calc(80vh - 10rem);
+    height: 80vh;
     display: flex;
     overflow: hidden;
     position: relative;
+    top: -10rem;
+    z-index: -1;
 
 }
 
@@ -210,17 +219,64 @@ header {
     background-color: var(--color-orange);
 }
 
-/* Seção 1 */
 
+
+/* section 1 */
+.menu-icon .section-body{
+    max-width: 114rem;
+    margin: auto;
+    min-width: 10rem;
+}
+.menus-containes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.menu-container img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.menu-container img:hover{
+    animation: translateY 0.8s infinite alternate;
+}
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1) ;
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.menu-container{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.menu-container .menu-desc{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+/* Seção 2 */
+.default-2{
+    background-color: var(--color-white);
+}
+#defaut-section{
+    background-color: var(--color-section);
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+}
 .default,
 .default-2 {
-    background-color: var(--color-white);
-    margin-bottom: 10rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 }
 #section-img {
-    margin-top: 10rem;
+    padding-top: 10rem;
 }
 
 .default .section-title,
@@ -303,7 +359,7 @@ header {
     color:var(--color-des);
 }
 
-
+/* SECTION 3 */
 .default-2 .section-containers {
     display: flex;
 }
@@ -348,8 +404,20 @@ header {
     margin-bottom: 1rem;
 }
 
+/* SECTION COMIDA */
 
+.section-container-bottom{
+    padding-top: 5rem;
+    display: flex;
+    gap: 3rem;
+}
+.section-container-bottom img{
+    width: 20rem;
+    height: 20rem;
+    border-top-right-radius: 4rem;
+}
 /* SLIDE FOTOS */
+
 
 .bg-slide {
     background-image: url('./image/bg-slide.jpg');
@@ -367,7 +435,17 @@ header {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
-
+.section-slide-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+.section-slide-title h1{
+    color: var(--color-white);
+    font-size: 5rem;
+    text-transform: uppercase;
+}
 .slides--colection{
     display: flex;
     overflow: hidden;
@@ -464,7 +542,7 @@ header {
 .default .section-map .button{
     font-size: 2rem;
     display: inline-flex;
-    background-color: var(--color-orange);
+    background-color: var(--color-gray);
     color: var(--color-black);
     text-decoration: none;
     font-weight: 600;
@@ -473,10 +551,11 @@ header {
     margin-top: 2rem;
     
 }
-
+.section-map .button:hover{
+    background-color: var(--color-orange);
+}
 .default .section-map i{
     margin-left: 1rem;
-    
     
 }
 
@@ -528,7 +607,17 @@ header {
     height: 4rem;
     
 }
-
+.footer-icon img:hover{
+    animation: translateY 0.8s infinite alternate ;
+} 
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
 .footer-container .footer-right{
     width: 40rem;
     
