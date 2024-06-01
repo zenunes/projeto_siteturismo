@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="menu">
-
-                <nav>
-                    <ul>
+                <img id="btn-menu" src="/assents/icon/menu-white.svg.svg" alt="menu-mobile">
+                <nav id="nav">
+                    <ul id="menu">
                         <li class="active"><a href="#">Início</a></li>
                         <li><a href="/floresta.html">Floresta</a></li>
                         <li><a href="/belem.html">Belém</a></li>
@@ -51,6 +51,13 @@
     <main>
         <section class="banner">
             <div class="sliders">
+                <div class="slide-fixo" id="bg-escuro">
+                    <div class="item-container">
+                        <h1>Explore a Autenticidade do Sertão Brasileiro</h1>
+                        <p>Descubra os segredos do sertão, desde suas paisagens áridas até suas ricas tradições
+                            culturais, com nossos guias especializados.</p>
+                    </div>
+                </div>
                 <div class="slider--width">
                     <div class="slide--item" style=" background-image: url(./assents/image/bg.jpg);">
                         <div class="bg-escuro">
@@ -99,27 +106,43 @@
             <div class="section-body">
                 <div class="menus-containes">
                     <div class="menu-container">
-                        <img src="/assents/image/hotel.jpg" alt="">
+                        <div class="container-img">
+                            <img src="/assents/icon/hotel.svg" alt="">
+                        </div>
                         <div class="menu-desc">
                             Hospedagem
                         </div>
                     </div>
                     <div class="menu-container">
-                        <img src="/assents/image/restaurantes1.jpg" alt="">
+                        <div class="container-img">
+                            <img src="/assents/icon/culinaria.svg" alt="">
+                        </div>
                         <div class="menu-desc">
                             Culinária
                         </div>
                     </div>
                     <div class="menu-container">
-                        <img src="/assents/image/igreja.jpg" alt="">
+                        <div class="container-img">
+                            <img src="/assents/icon/cultura.svg" alt="">
+                        </div>
                         <div class="menu-desc">
-                            Locais culturais
+                            Cultura
                         </div>
                     </div>
                     <div class="menu-container">
-                        <img src="/assents/image/rio.jpg" alt="">
+                        <div class="container-img">
+                            <img src="/assents/icon/paisagem.svg" alt="">
+                        </div>
                         <div class="menu-desc">
-                            Passeios
+                            Paisagens
+                        </div>
+                    </div>
+                    <div class="menu-container">
+                        <div class="container-img">
+                           <a href="#galeria"> <img src="/assents/icon/galeria-svg.svg" alt=""></a>
+                        </div>
+                        <div class="menu-desc">
+                            Galeria
                         </div>
                     </div>
                 </div>
@@ -209,7 +232,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-turis" id="card-1">
+                        <img src="/assents/image/casas2.jpg" alt="">
+                        <div class="desc">
+                            <h1>Casas barrocas</h1>
+                            <p>descriçao relacionada a foto</p>
+                        </div>
+                    </div>
+                    <div class="card-turis" id="card-2">
+                        <img src="/assents/image/casas2.jpg" alt="">
+                        <div class="desc">
+                            <h1>Casas barrocas</h1>
+                            <p>descriçao relacionada a foto</p>
+                        </div>
+                    </div>
+                    <div class="card-turis" id="card-3">
+                        <img src="/assents/image/casas2.jpg" alt="">
+                        <div class="desc">
+                            <h1>Casas barrocas</h1>
+                            <p>descriçao relacionada a foto</p>
+                        </div>
+                    </div>
+                    <div class="card-turis" id="card-4">
+                        <img src="/assents/image/casas2.jpg" alt="">
+                        <div class="desc">
+                            <h1>Casas barrocas</h1>
+                            <p>descriçao relacionada a foto</p>
+                        </div>
+                    </div>
+                    <div class="card-turis" id="card-5">
+                        <img src="/assents/image/casas2.jpg" alt="">
+                        <div class="desc">
+                            <h1>Casas barrocas</h1>
+                            <p>descriçao relacionada a foto</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
         <section class="default-2">
             <div class="section-body">
@@ -253,18 +314,18 @@
                     </div>
                 </div>
                 <div class="section-container-bottom">
-                    <img src="/assents/img_compactado/comida.jpg" alt="">
-                    <img src="/assents/img_compactado/comida.jpg" alt="">
-                    <img src="/assents/img_compactado/comida.jpg" alt="">
-                    <img src="/assents/img_compactado/comida.jpg" alt="">
-                    <img src="/assents/img_compactado/comida.jpg" alt="">
-                    
-                    
+                    <img id="img-comida-1" src="/assents/img_compactado/comida.jpg" alt="">
+                    <img id="img-comida-2" src="/assents/img_compactado/comida.jpg" alt="">
+                    <img id="img-comida-3" src="/assents/img_compactado/comida.jpg" alt="">
+                    <img id="img-comida-4" src="/assents/img_compactado/comida.jpg" alt="">
+                    <img id="img-comida-5" src="/assents/img_compactado/comida.jpg" alt="">
+
+
                 </div>
             </div>
             </div>
         </section>
-        <section id="defaut-section" class="default-2">
+        <section id="defaut-section" class="default-2" >
             <div class="section-body">
                 <div class="section-containers">
                     <div class="container">
@@ -332,7 +393,7 @@
                 </div>
             </div>
         </section>
-        <section class="default bg-slide">
+        <section class="default bg-slide" id="galeria">
             <div class="section-slide">
                 <div class="section-body">
                     <div class="section-slide-title">

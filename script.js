@@ -2,11 +2,10 @@ let totalslide = document.querySelectorAll('.slide--item').length;
 let currentSlide = 0;
 
 // configurando a largura do slide
+let btnmobile = document.getElementById('btn-menu');
 let sliderWidth = document.querySelector('.slider--width').style.width = `calc(100vw * ${totalslide}`;
 
 // ajustando a altura dos controles de slides - centralizar eles
-// document.querySelector('.slider-controls').style.height = `${document.querySelector('.sliders').clientHeight}px`;
-
 document.querySelector('.slider-controls-colection').style.height = `${document.querySelector('.slides--colection').clientHeight}px`;
 
 
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuItems.forEach(item => {
         item.addEventListener('click', function (e) {
             // Evita o comportamento padrão do link
-            // e.preventDefault();
+            e.preventDefault();
 
             // Remove a classe 'active' de todos os itens
             document.querySelectorAll('.menu nav ul li').forEach(li => {
@@ -119,6 +118,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const slideWidth = slidesColetion.length * 260;
         sliderContainer.style.maxWidth = `${slideWidth}px`;
     });
+
+    
+
     // Define o intervalo de troca de slides
     setInterval(nextSlide, 5000);
 });
+
+    function openMenu(event) {
+        // esse if previne que o touchstart feche o menu 
+        if (event.type === 'touchstart') event.preventDefault();
+        const nav  = document.querySelector('#nav');
+        nav.classList.toggle('actived');
+    }
+btnmobile.addEventListener('click', openMenu);
+// o touchstart previne que o menu demore para abrir
+btnmobile.addEventListener('touchstart', openMenu);

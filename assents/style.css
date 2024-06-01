@@ -96,6 +96,9 @@ header {
     border-bottom: 5px solid var(--color-orange);
     color: var(--color-orange);
 }
+#btn-menu{
+    display: none;
+}
 
 /* SLIDERSHOW */
 /* BANNER */
@@ -110,7 +113,15 @@ header {
     z-index: -1;
 
 }
-
+.slide-fixo{
+    display: none;
+}
+#bg-escuro{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100%;
+    display: none;
+}
 .slider--width {
     height: 100%;
     display: flex;
@@ -237,23 +248,25 @@ header {
    
 }
 .menu-container img{
-    width: 15rem;
-    height: 15rem;
+    width: 5rem;
+    height: 5rem;
+    
+    
+}
+.container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height:12rem;
     border-radius: 50%;
+    background-color: var(--color-section);
     cursor: pointer;
+   
 }
-.menu-container img:hover{
-    animation: translateY 0.8s infinite alternate;
+.container-img:hover{
+    background-color: var(--color-orange);
 }
-@keyframes translateY{
-    from{
-        transform: translateY(0) scale(1) ;
-    }
-    to{
-        transform: translateY(-8px) scale(1.1);
-    }
-}
-
 .menu-container{
     display: inline-flex;
     flex-direction: column;
@@ -405,6 +418,45 @@ header {
 
 .default-2 .container-info h3 {
     margin-bottom: 1rem;
+}
+.card{
+    display: flex;
+    width: 114rem;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+.card-turis{
+    background-color: var(--color-white);
+    width:20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction:column ;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 2rem;
+    
+    
+}
+.card {
+    width: 114rem;
+    margin: auto;
+}
+.card-turis img{
+    width: 15rem;
+    height: 10rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+   
+}
+.card-turis .desc{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.desc h1{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 /* SECTION COMIDA */
@@ -657,6 +709,141 @@ header {
 
 
 /* RESPONSIVIDADE - TABLET 1 */
+
+
+@media (max-width:700px){
+
+    #btn-menu{
+        display: block;
+        margin-right:1.5rem ;
+        cursor: pointer;
+    }
+    #menu{
+        display: block;
+        /* display: block; */
+        position: absolute;
+        width: 80%;
+        top: 10rem;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 1);
+        transition: .6s;
+        z-index: 1000;
+        height: 0;
+        visibility: hidden;
+        overflow-y:hidden ;
+    }
+    #nav.actived #menu{
+        height: calc(100vh - 10rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 2rem;
+        font-size: 2rem;
+    }
+
+    .slider--width{
+        display: none;
+    }
+    .sliders{
+        background-image: url(/assents/img_compactado/bg2.jpg);
+        background-position: center;
+    }
+    #bg-escuro{
+        display: flex;
+    }
+    .slide-fixo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide-fixo h1{
+    font-size: 5rem;
+    color: var(--color-white);
+    margin: 1rem 3rem;
+    font-family: 'Artifika', Arial, Helvetica, sans-serif;
+    }
+    .slide-fixo p{
+        color: var(--color-white);
+        margin: 1rem 3rem;
+        font-family: 'Artifika', Arial, Helvetica, sans-serif;
+    }
+    /* .menu-container, */
+    .slider-indicators,
+    .slider-controls{
+        display: none;
+    }
+    /* SECTION 1 -MENU */
+    .menus-containes{
+        flex-wrap: wrap;
+    }
+    .menu-container{
+        min-width: 25%;
+    }
+    /* SECTION 2 */
+    .default .section-title{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .section-destaque .slides{
+        flex-direction: column;
+        
+    }
+    .section-destaque .slide{
+        display: flex;
+        width: 65rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* SECTION 3 */
+    .card{
+        display: none;
+    }
+    .default-2 .left-title h1{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .default-2 .left-desc{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .default-2 .container-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+    }
+    .section-container-bottom{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+@media (max-width:1150px){
+
+    .menus-containes{
+    gap: 8rem;
+    justify-content: center;
+    }
+    .section-container-bottom,
+    .card{
+        justify-content: center;
+        gap: 8rem;
+    }
+    #img-comida-5,
+    #card-5{
+        display: none;
+    }
+}
+
 
 @media (max-width: 1030px) {
     .slides--colection .slider-controls-colection{
