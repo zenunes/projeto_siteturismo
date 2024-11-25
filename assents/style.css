@@ -19,7 +19,6 @@ html{
 
 }
 body {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     font-size: 1.5rem;
     
@@ -34,6 +33,7 @@ header {
 }
 
 .header {
+    font-family: "Montserrat", sans-serif;
     max-width: 114rem;
     height: 100px;
     margin: auto;
@@ -153,9 +153,12 @@ header {
     cursor: pointer;
 }
 
-.slider-controls .slide-control img {
-    width: 5rem;
-    height: 5rem;
+.slider-controls .slide-control a{
+    display: flex;
+    width: 10rem;
+    height: auto;
+    
+    
     
 }
 
@@ -163,7 +166,7 @@ header {
 .slider-controls .slide-control {
     width: 5rem;
     height: 9rem;
-    background: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
     margin: 0 1% 0 1%;
@@ -173,8 +176,11 @@ header {
 
 .slider-controls .slide-control:hover {
     background-color:var(--color-orange);
+    
 }
-
+.slider-controls .slide-control a:hover{
+    color: var(--color-white);
+}
 
 .slider--width .item-container {
     display: flex;
@@ -190,12 +196,16 @@ header {
     font-size: 6rem;
     color: var(--color-white);
     margin-bottom: 1rem;
-    font-family: 'Artifika', Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif; 
 }
-
+.slider--width .item-container span{
+    color: #FDAF2D;
+}
 .slider--width .item-container p {
     color: var(--color-white);
     font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    
 
 }
 
@@ -236,6 +246,9 @@ header {
 
 
 /* section 1 */
+.menu-icon{
+    display: none;
+}
 .menu-icon .section-body{
     max-width: 114rem;
     margin: auto;
@@ -289,22 +302,29 @@ header {
 .default,
 .default-2 {
     padding-bottom: 10rem;
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
 }
 #section-img {
     padding-top: 10rem;
 }
 
-.default .section-title,
-.default .section-desc {
+.default .section-title{
+    font-family: "Montserrat", sans-serif;
     text-align: center;
-    font-weight: 600;
+}
+.default .section-desc {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    font-weight: 400;
+}
+.slidearea h1{
+    font-family: "Montserrat", sans-serif;
+    
 }
 
 .default .section-title {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
@@ -348,15 +368,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
 .section-destaque .slidearea img {
     width: 100%;
     height: 30rem;
+    border-radius:2% ;
     margin-bottom: 4rem;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
 }
 
 .section-destaque .destaque-title {
@@ -364,10 +384,14 @@ header {
     justify-content: center;
 }
 
-.section-destaque .destaque-title h1 {
+.section-destaque h1 {
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
+.section-destaque .slide-desc h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+} 
 
 .section-destaque .slide-desc {
     text-align: justify;
@@ -394,7 +418,8 @@ header {
 .default-2 .container-right img {
     width: 100%;
     height: 50rem;
-    box-shadow: 0px 5px 10px #133313;
+    border-radius:2% ;
+    
 }
 
 .default-2 .left-title h1{
@@ -470,6 +495,7 @@ header {
     width: 20rem;
     height: 20rem;
     border-top-right-radius: 4rem;
+    border-radius:2% ;
 }
 /* SLIDE FOTOS */
 
@@ -655,15 +681,19 @@ header {
     justify-content: space-around;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    
+
 
 }
-.footer-icon img{
+.footer-icon a{
     width: 4rem;
-    height: 4rem;
+    height: auto;
+    color: #ffff;
     
 }
-.footer-icon img:hover{
+.footer-icon a:hover {
     animation: translateY 0.8s infinite alternate ;
+    color: #FDAF2D;
 } 
 @keyframes translateY{
     from{
@@ -821,7 +851,37 @@ header {
     }
     
 }
-
+@media (max-width: 1000px) {
+    #btn-menu{
+        display: block;
+        margin-right:1.5rem ;
+        cursor: pointer;
+    }
+    #menu{
+        display: block;
+        /* display: block; */
+        position: absolute;
+        width: 80%;
+        top: 10rem;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 1);
+        transition: .6s;
+        z-index: 1000;
+        height: 0;
+        visibility: hidden;
+        overflow-y:hidden ;
+    }
+    #nav.actived #menu{
+        height: calc(100vh - 10rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 2rem;
+        font-size: 2rem;
+    }
+}
 
 
 

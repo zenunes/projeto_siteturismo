@@ -134,3 +134,10 @@ document.addEventListener('DOMContentLoaded', function () {
 btnmobile.addEventListener('click', openMenu);
 // o touchstart previne que o menu demore para abrir
 btnmobile.addEventListener('touchstart', openMenu);
+
+window.addEventListener('load', () => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false})});
