@@ -135,9 +135,31 @@ btnmobile.addEventListener('click', openMenu);
 // o touchstart previne que o menu demore para abrir
 btnmobile.addEventListener('touchstart', openMenu);
 
+// Função para criar o efeito de popup das section ao rolar
 window.addEventListener('load', () => {
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
     once: true,
     mirror: false})});
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Mostra/esconde botão baseado no scroll
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Ação de rolagem suave ao clicar
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });

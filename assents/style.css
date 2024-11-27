@@ -101,9 +101,9 @@ header {
 }
 
 /* SLIDERSHOW */
+
+
 /* BANNER */
-
-
 .sliders {
     height: 80vh;
     display: flex;
@@ -140,7 +140,7 @@ header {
     
 
 }
-
+/* BOTÃO DO SLIDER */
 .slider-controls {
     position: absolute;
     z-index: 100;
@@ -153,10 +153,10 @@ header {
     cursor: pointer;
 }
 
-.slider-controls .slide-control a{
-    display: flex;
-    width: 10rem;
-    height: auto;
+.slider-controls .slide-control svg{
+    width: 4rem;
+    height:auto;
+    color:rgba(0, 0, 0, 0.7);
     
     
     
@@ -168,20 +168,20 @@ header {
     height: 9rem;
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
-    align-items: center;
-    margin: 0 1% 0 1%;
+    justify-content: center; /* Centraliza no eixo horizontal */
+    align-items: center;    /* Centraliza no eixo vertical */
+    margin: 0 1%;
     border-radius: 10%;
     
 }
 
 .slider-controls .slide-control:hover {
-    background-color:var(--color-orange);
-    
-}
-.slider-controls .slide-control a:hover{
-    color: var(--color-white);
+    background-color: #df8d00;
 }
 
+.slider-controls .slide-control:hover svg {
+    color: #f3f1f1; /* O SVG muda de cor ao passar o mouse na área do slide-control */
+}
 .slider--width .item-container {
     display: flex;
     max-width: 60%;
@@ -243,7 +243,31 @@ header {
     background-color: var(--color-orange);
 }
 
-
+/* BOTÃO DE ROLAGEM */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:#FDAF2D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+#back-to-top:hover {
+    background-color:#df8d00;
+}
+#back-to-top svg {
+    width: 4rem;
+    height: 4rem;
+}
 
 /* section 1 */
 .menu-icon{
@@ -317,10 +341,6 @@ header {
     text-align: center;
     font-weight: 400;
 }
-.slidearea h1{
-    font-family: "Montserrat", sans-serif;
-    
-}
 
 .default .section-title {
     font-size: 5rem;
@@ -385,13 +405,20 @@ header {
 }
 
 .section-destaque h1 {
-    text-transform: uppercase;
     margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: #FDAF2D;
 }
 .section-destaque .slide-desc h2{
     font-size: 2rem;
     margin-bottom: 2rem;
+    font-family: "Merriweather", serif;
+
 } 
+.section-destaque .slide-desc p{
+    font-family: "Montserrat", sans-serif;
+}
 
 .section-destaque .slide-desc {
     text-align: justify;
@@ -410,7 +437,12 @@ header {
     margin-right: 2rem;
 
 }
-
+.default-2 .container h1{
+    font-family: "Roboto", sans-serif;
+}
+.default-2 .container .left-desc{
+    font-family: "Montserrat", sans-serif;
+}
 .default-2 .container:last-child {
     margin-right: 0px;
 }
@@ -423,10 +455,9 @@ header {
 }
 
 .default-2 .left-title h1{
-    font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-bottom: 2rem;
-    text-transform: uppercase;
+   
 }
 
 .default-2 .left-desc {
@@ -459,16 +490,24 @@ header {
     /* justify-content: center; */
     align-items: center;
     padding-top: 2rem;
-    
-    
 }
+
+
 .card {
     width: 114rem;
     margin: auto;
+    
+}
+.card-turis{
+    border-radius: 5%;
+    background-color: #FDAF2D;
+    width: 25rem;
+    height: auto;
+    text-align: justify;
 }
 .card-turis img{
-    width: 15rem;
-    height: 10rem;
+    width: 20rem;
+    height: 15rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
    
@@ -481,7 +520,13 @@ header {
 }
 .desc h1{
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif
+}
+.card .desc p{
+    font-family: "Montserrat", sans-serif;
+    margin: 1rem;
+
 }
 
 /* SECTION COMIDA */
