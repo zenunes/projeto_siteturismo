@@ -11,11 +11,15 @@ html{
 }
 :root{
     --color-orange:#FDAF2D;
-    --color-black:#000;
+    --color-black:#33322d;
     --color-gray:#a3a3a3;
-    --color-des:#000;
+    --color-des:#33322d;
     --color-white:#fff;
     --color-section: #f2f2f2;
+
+    --font-primary: "Plus Jakarta Sans", serif;
+    --font-secondary: "Plus Jakarta Sans", serif;
+    --font-accent: "Plus Jakarta Sans", serif;
 
 }
 body {
@@ -33,8 +37,10 @@ header {
 }
 
 .header {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     max-width: 114rem;
+    padding-left:1rem ;
+    padding-right: 1rem;
     height: 100px;
     margin: auto;
     display: flex;
@@ -42,16 +48,13 @@ header {
 }
 
 .logo {
-    width: 100px;
-}
-
-.logoimg {
-    width: 8.0rem;
-    height: 8.0rem;
-    background-color: var(--color-orange);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 10rem;
+    margin-left: 1rem;
+}
+.logo img{
+    width: 20rem;
+    height: auto;
 }
 
 /* MENU DO HEADER */
@@ -154,9 +157,9 @@ header {
 }
 
 .slider-controls .slide-control svg{
-    width: 4rem;
+    width: 2rem;
     height:auto;
-    color:rgba(0, 0, 0, 0.7);
+    color:var(--color-white);
     
     
     
@@ -164,9 +167,10 @@ header {
 
 
 .slider-controls .slide-control {
-    width: 5rem;
-    height: 9rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 3rem;
+    height: 6rem;
+    background-color:transparent;
+    border: 2px solid var(--color-white);
     display: flex;
     justify-content: center; /* Centraliza no eixo horizontal */
     align-items: center;    /* Centraliza no eixo vertical */
@@ -196,7 +200,7 @@ header {
     font-size: 6rem;
     color: var(--color-white);
     margin-bottom: 1rem;
-    font-family: "Roboto", sans-serif; 
+    font-family: var(--font-primary); 
 }
 .slider--width .item-container span{
     color: #FDAF2D;
@@ -204,7 +208,7 @@ header {
 .slider--width .item-container p {
     color: var(--color-white);
     font-size: 1.8rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-secondary);
     
 
 }
@@ -246,14 +250,18 @@ header {
 /* BOTÃO DE ROLAGEM */
 #back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2vh; /* Posição relativa ao tamanho da viewport */
+    right: 1vw;
     background-color:#FDAF2D;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 10vw; /* Ajustável ao tamanho da viewport */
+    height: 10vw;
+    max-width: 50px; /* Tamanho máximo */
+    max-height: 50px;
+    min-width: 40px; /* Tamanho mínimo */
+    min-height: 40px;
     cursor: pointer;
     display: none; /* Inicialmente escondido */
     justify-content: center;
@@ -277,6 +285,7 @@ header {
     max-width: 114rem;
     margin: auto;
     min-width: 10rem;
+    
 }
 .menus-containes {
     display: flex;
@@ -315,13 +324,11 @@ header {
     font-weight: bold;
 }
 /* Seção 2 */
-.default-2{
-    background-color: var(--color-white);
-}
-#defaut-section{
-    background-color: var(--color-section);
-    padding-bottom: 10rem;
-    padding-top: 10rem;
+
+#default-section{
+    background-color: var(--color-black); 
+    padding-bottom: 8rem;
+    padding-top: 8rem;
 }
 .default,
 .default-2 {
@@ -333,11 +340,11 @@ header {
 }
 
 .default .section-title{
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-secondary);
     text-align: center;
 }
 .default .section-desc {
-    font-family: "Merriweather", serif;
+    font-family: var(--font-accent);
     text-align: center;
     font-weight: 400;
 }
@@ -346,6 +353,8 @@ header {
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .default .section-desc {
@@ -353,6 +362,8 @@ header {
     margin: auto;
     color: var(--color-graylite);
     margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .default .section-body,
@@ -360,75 +371,36 @@ header {
     max-width: 114rem;
     margin: auto;
     min-width: 10rem;
+   
 
 }
 
-.section-destaque {
-    overflow: hidden;
-}
+/* ------ SECTION culinaria ------*/
 
-.section-destaque .slides {
+.default-2 .section-containers-info-esquerda {
     display: flex;
 }
-
-.section-destaque .slide {
-    flex: 1;
-    margin-right: 2rem;
-    width: 28rem;
-    height: 100%;
-    min-height: 30rem;
+.rodape{
     display: inline-block;
+    position: relative;
+    margin-bottom: 8rem;
 }
-
-.section-destaque .slide:last-child {
-    margin-right: 0px;
+.frase{
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--color-black);
+    letter-spacing: 2px;
 }
-
-.section-destaque .slidearea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.section-destaque .slidearea img {
-    width: 100%;
-    height: 30rem;
-    border-radius:2% ;
-    margin-bottom: 4rem;
-}
-
-.section-destaque .destaque-title {
-    display: flex;
-    justify-content: center;
-}
-
-.section-destaque h1 {
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    color: #FDAF2D;
-}
-.section-destaque .slide-desc h2{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: "Merriweather", serif;
-
-} 
-.section-destaque .slide-desc p{
-    font-family: "Montserrat", sans-serif;
-}
-
-.section-destaque .slide-desc {
-    text-align: justify;
-    font-size: 1.7rem;
-    color:var(--color-des);
-}
-
-/* SECTION 3 */
-.default-2 .section-containers {
-    display: flex;
+.linha{
+display: block;
+position: absolute;
+height: 5px; /* Espessura da linha */
+background-color: var(--color-orange); /* Cor da linha */
+bottom: -6px; /* Distância entre a linha e a palavra */
+left: 0;
+right: 0;
+border-radius: 1rem;
 }
 
 .default-2 .container {
@@ -437,28 +409,210 @@ header {
     margin-right: 2rem;
 
 }
-.default-2 .container h1{
-    font-family: "Roboto", sans-serif;
+.default-2 .section-containers-info-esquerda .right-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }
-.default-2 .container .left-desc{
-    font-family: "Montserrat", sans-serif;
+.default-2 .section-containers-info-esquerda .right-subtitle span{
+    font-size: 2.4rem;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--color-black);
+}
+.default-2  .section-containers-info-esquerda span#cor{
+    color: var(--color-orange);
+}
+.default-2 .section-containers-info-esquerda .right-title span{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: bold;
+    color:var(--color-black);
+    
+}
+.default-2 .section-containers-info-esquerda .right-title{
+    margin-bottom: 2.5rem;
+}
+.default-2 .section-containers-info-esquerda .container .right-desc{
+    font-family: var(--font-secondary);
+    font-size: 2rem;
 }
 .default-2 .container:last-child {
     margin-right: 0px;
 }
+ 
+/* ----- botão */
+.botao-culinaria{
+    display: flex;
+    align-items: center;
+   }
 
+/* Estilo do botão */
+.botao-culinaria .saiba-mais-btn {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem; /* Espaçamento interno */
+    font-size: 1.2rem; /* Tamanho do texto */
+    font-family: 'Arial', sans-serif; /* Fonte */
+    font-weight: bold; /* Peso do texto */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    background: var(--color-black); /* Gradiente de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.btn-saiba-mais .icon-arrow {
+    margin-left: 0.5rem; /* Espaçamento entre texto e ícone */
+    font-size: 1.2rem; /* Tamanho do ícone */
+}
+/* Efeito hover */
+.saiba-mais-btn:hover {
+    background: var(--color-orange); /* Gradiente invertido */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    color: var(--color-black);
+}
+
+/* Efeito ao clicar */
+.saiba-mais-btn:active {
+    transform: scale(1); /* Retorna ao tamanho original */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
+/* ------ fim ------- */
+/* -----fim------- */
+
+
+/* ------ cultura ----- */
+
+.default-2 .section-containers-info-direita{
+    display: flex;
+}
+.default-2 .section-containers-info-direita .alinhar-direta {
+    display: flex;
+    justify-content: flex-end; /* Alinha todo o conteúdo à direita */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+}
+.default-2 .section-containers-info-direita .rodape-{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 8rem;
+}
+.default-2 .section-containers-info-direita .frase{
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--color-white);
+    letter-spacing: 2px;
+}
+.default-2 .section-containers-info-direita .linha{
+display: block;
+position: absolute;
+height: 5px; /* Espessura da linha */
+background-color: var(--color-orange); /* Cor da linha */
+bottom: -6px; /* Distância entre a linha e a palavra */
+left: 0;
+right: 0;
+border-radius: 1rem;
+}
+
+.default-2 .section-containers-info-direita .left-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.default-2 .section-containers-info-direita .left-subtitle span{
+    font-size: 2.4rem;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--color-white);
+}
+.default-2  .section-containers-info-direita span#cor{
+    color: var(--color-orange);
+}
+.default-2  .section-containers-info-direita .left-title span{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: bold;
+    color:var(--color-white);
+}
+.default-2 .section-containers-info-direita .left-title{
+    margin-bottom: 2.5rem;
+}
+.default-2 .section-containers-info-direita .container .left-desc{
+    font-family: var(--font-secondary);
+    color: var(--color-white);
+}
+.left-title,
+.left-desc {
+    text-align: right; /* Alinha o texto à direita */
+}
+
+/* ----- botão */
+.botao-cultura {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   }
+
+/* Estilo do botão */
+.saiba-mais-btn {
+    display: inline-block;
+    padding: 1rem 2rem; /* Espaçamento interno */
+    font-size: 1.2rem; /* Tamanho do texto */
+    font-family: 'Arial', sans-serif; /* Fonte */
+    font-weight: bold; /* Peso do texto */
+    color: var(--color-black); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    background: var(--color-white); /* Gradiente de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Efeito hover */
+.saiba-mais-btn:hover {
+    background: var(--color-orange); /* Gradiente invertido */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    color: var(--color-black);
+}
+
+/* Efeito ao clicar */
+.saiba-mais-btn:active {
+    transform: scale(1); /* Retorna ao tamanho original */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
+/* ------ fim ------- */
+/* ----- fim ----- */
+
+
+
+/* trapezio da imagem do lado direito */
+.default-2 .container-right .trapezio{
+    width: 100%;
+    overflow: visible; /* Permite que a sombra seja visível fora do contêiner */
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); /* Forma de trapézio */
+}
 .default-2 .container-right img {
     width: 100%;
     height: 50rem;
-    border-radius:2% ;
     
 }
+/* -----fim -------*/
 
-.default-2 .left-title h1{
-    font-size: 4.5rem;
-    margin-bottom: 2rem;
-   
+/* trapezio da imagem do lado esquerdo */
+.default-2 .container-left .trapezio{
+    width: 100%;
+     overflow: hidden; /* Garante que o conteúdo fique dentro do contêiner */
+     clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%); /* Forma de trapézio */
 }
+.default-2 .container-left img {
+    width: 100%;
+    height: 50rem;
+}
+/* ---fim---- */
 
 .default-2 .left-desc {
     color: var(--color-des);
@@ -471,80 +625,16 @@ header {
     align-items: center;
     margin-top: 2rem;
 }
+.default-2 .container-info .dest-info{
+    font-family: var(--font-accent);
+}
 
-.default-2 .container-info h3 {
+.default-2 .container-info h2 {
     margin-bottom: 1rem;
-}
-.card{
-    display: flex;
-    width: 114rem;
-    justify-content: space-between;
-    padding-top: 2rem;
-}
-.card-turis{
-    background-color: var(--color-white);
-    width:20rem;
-    height: 25rem;
-    display: flex;
-    flex-direction:column ;
-    /* justify-content: center; */
-    align-items: center;
-    padding-top: 2rem;
+    font-family: var(--font-primary);
 }
 
-
-.card {
-    width: 114rem;
-    margin: auto;
-    
-}
-.card-turis{
-    border-radius: 5%;
-    background-color: #FDAF2D;
-    width: 25rem;
-    height: auto;
-    text-align: justify;
-}
-.card-turis img{
-    width: 20rem;
-    height: 15rem;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-   
-}
-.card-turis .desc{
-    padding-top: 2rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.desc h1{
-    padding-bottom: 1rem;
-    font-size: 2rem;
-    font-family: "Roboto", sans-serif
-}
-.card .desc p{
-    font-family: "Montserrat", sans-serif;
-    margin: 1rem;
-
-}
-
-/* SECTION COMIDA */
-
-.section-container-bottom{
-    padding-top: 5rem;
-    display: flex;
-    gap: 3rem;
-}
-.section-container-bottom img{
-    width: 20rem;
-    height: 20rem;
-    border-top-right-radius: 4rem;
-    border-radius:2% ;
-}
-/* SLIDE FOTOS */
-
-
+/* ----------slide galeria ------------*/
 .bg-slide {
     background-image: url('./image/bg-slide.jpg');
     background-size: cover;
@@ -558,19 +648,60 @@ header {
 .section-slide {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 .section-slide-title{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10rem;
+    
 }
-.section-slide-title h1{
+
+.section-slide-title .rodape{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 6rem;
+}
+.section-slide-title .frase{
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 2.4rem;
     color: var(--color-white);
-    font-size: 5rem;
-    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.section-slide-title .linha{
+    display: block;
+    position: absolute;
+    height: 5px; /* Espessura da linha */
+    background-color: var(--color-orange); /* Cor da linha */
+    bottom: -6px; /* Distância entre a linha e a palavra */
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+}
+.section-slide .slide-texto{
+    margin-bottom: 8rem;
+}
+.section-slide .slide-subtitle{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 2rem;
+}
+.section-slide .slide-texto .slide-title span{
+    font-size: 3rem;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--color-white);
+}
+.section-slide .slide-texto .slide-title span#cor{
+    color: var(--color-orange)
+}
+.section-slide .slide-texto .slide-subtitle span#cor{
+    color: var(--color-orange)
 }
 .slides--colection{
     display: flex;
@@ -594,6 +725,7 @@ header {
     margin-right: 2rem;
     background-size: cover;
     background-position: center;
+    border-radius: 5px;
 
 }
 
@@ -608,30 +740,31 @@ header {
     cursor: pointer;
 }
 
-.slides--colection .slider-controls-colection .slide-control-colection img {
-    width: 5rem;
-    height: 5rem;
+.slides--colection .slider-controls-colection .slide-control-colection svg{
+    width: 2rem;
+    height: auto;
+    color: var(--color-white);
 
 }
 
 
 .slides--colection .slider-controls-colection .slide-control-colection {
-    width: 5rem;
-    height: 8rem;
-    background: var(--color-white);
+    width: 3rem;
+    height: 6rem;
+    background: transparent;
     display: flex;
     align-items: center;
     margin:0;
     border-radius: 10%;
+    border: 2px solid var(--color-white);
+    
 }
-.slides--colection .slider-controls-colection .slide-control-colection:hover{
-    border: 1.5px solid var(--color-black);
-}
+
 .slider-controls-colection .slide-control-colection:hover {
     background-color: var(--color-orange);
     
 }
-
+/* ----------fim--------- */
 /* SECTION LOCALIZAÇÃO */
 
 .default .section-map{
@@ -696,6 +829,7 @@ header {
     max-width: 114rem;
     margin: auto;
     min-width: 10rem;
+    
 }
 .footer .footer-borda{
     width: 90%;
@@ -750,7 +884,6 @@ header {
 }
 .footer-container .footer-right{
     width: 40rem;
-    
     margin-left: 1.5rem;
 }
 .footer-right .title{
@@ -783,11 +916,12 @@ header {
 }
 
 
-/* RESPONSIVIDADE - TABLET 1 */
+/* RESPONSIVIDADE - CELULAR 1 */
 
 
-@media (max-width:700px){
+@media (max-width: 768px){
 
+    /* ----------MENU HAMBURGUER------- */
     #btn-menu{
         display: block;
         margin-right:1.5rem ;
@@ -817,7 +951,9 @@ header {
         margin: 0 2rem;
         font-size: 2rem;
     }
+/* =--------------------------------------------------- */
 
+/* ----------- SLIDE DO HERO ---------------- */
     .slider--width{
         display: none;
     }
@@ -837,46 +973,53 @@ header {
     font-size: 5rem;
     color: var(--color-white);
     margin: 1rem 3rem;
-    font-family: 'Artifika', Arial, Helvetica, sans-serif;
+    font-family: var(--font-secondary);
     }
     .slide-fixo p{
         color: var(--color-white);
         margin: 1rem 3rem;
-        font-family: 'Artifika', Arial, Helvetica, sans-serif;
+        font-family: var(--font-primary);
     }
     /* .menu-container, */
     .slider-indicators,
     .slider-controls{
         display: none;
     }
-    /* SECTION 1 -MENU */
+
+
+
+    /* SECTION 1  */
     .menus-containes{
         flex-wrap: wrap;
     }
     .menu-container{
         min-width: 25%;
     }
+    
+
+
     /* SECTION 2 */
-    .default .section-title{
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+    
+   
     .section-destaque .slides{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         
     }
     .section-destaque .slide{
         display: flex;
         width: 65rem;
+        height: auto;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-top: 2rem;
     }
+    
 
     /* SECTION 3 */
-    .card{
-        display: none;
-    }
+    
     .default-2 .left-title h1{
         margin-left: 1rem;
         margin-right: 1rem;
@@ -896,7 +1039,14 @@ header {
     }
     
 }
-@media (max-width: 1000px) {
+
+
+
+/* TAMANHO PARA TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /*---------- MENU HAMBURGUER ---------*/
     #btn-menu{
         display: block;
         margin-right:1.5rem ;
@@ -906,7 +1056,7 @@ header {
         display: block;
         /* display: block; */
         position: absolute;
-        width: 80%;
+        width: 60%;
         top: 10rem;
         right: 0px;
         background-color: rgba(0, 0, 0, 1);
@@ -926,58 +1076,48 @@ header {
         margin: 0 2rem;
         font-size: 2rem;
     }
-}
 
-
-
-
-
-@media (max-width:1150px){
-
-    .menus-containes{
-    gap: 8rem;
-    justify-content: center;
+/* ----------------------------------------- */
+    .logo {
+    margin-left: 1rem;
     }
-    .section-container-bottom,
-    .card{
-        justify-content: center;
-        gap: 8rem;
-    }
-    #img-comida-5,
-    #card-5{
-        display: none;
-    }
-}
 
-
-@media (max-width: 1030px) {
-    .slides--colection .slider-controls-colection{
-        display: none;
-    }
-}
-
-@media (max-width: 1010px){
-    .slides--colection{
-        max-width: 76rem;
-    }
-    .default-2 .section-containers{
-        flex-direction: column;
-    }
-    .default-2 .section-containers.reverse{
-        flex-direction: column-reverse;
-    }
-    .default-2 .container{
-        margin-right: 0;
-    }
-    .container-right{
+    .menu-icon { 
         display: flex;
-        margin-top: 2rem;
-
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-section);
+        width: 100%;
+        padding: 1rem;
     }
-    .default-2 .container-right img{
-        width: 60rem;
-        height: 40rem;
+
+    .menus-containes {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .menu-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
         margin: auto;
-        
+    }
+
+    .menu-container img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .container-img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .menu-container .menu-desc {
+        font-size: 1.8rem;
     }
 }
+
+/* ****************** FIM ***************************** */
