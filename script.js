@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 // gerador de indicadores de slides
 let indicatorsContainer = document.querySelector('.slider-indicators');
 for (let i = 0; i < totalslide; i++) {

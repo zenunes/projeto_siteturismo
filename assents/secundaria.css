@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+    /* faz uma rolagem suavem, porem não funciona em todos os navegadores */
+    font-size: 62.5%;
+}
+:root{
+    --color-orange:#FDAF2D;
+    --color-black:#1f2937;
+    --color-gray:#a3a3a3;
+    --color-des:#33322d;
+    --color-white:#fff;
+    --color-section: #f2f2f2;
+
+    --font-primary: "Plus Jakarta Sans", serif;
+    --font-secondary: "Plus Jakarta Sans", serif;
+    --font-accent: "Plus Jakarta Sans", serif;
+
+}
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+
+/* frase com lista */
+.rodape{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.frase{
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--color-black);
+    letter-spacing: 2px;
+}
+.linha{
+display: block;
+position: absolute;
+height: 5px; /* Espessura da linha */
+background-color: var(--color-orange); /* Cor da linha */
+bottom: -6px; /* Distância entre a linha e a palavra */
+left: 0;
+right: 0;
+border-radius: 1rem;
+}
+
+/* header */
+.sliders-2 {
+    height: 80vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    top: -10rem;
+    z-index: -1;
+}
+.sliders-2 #bg-escuro{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100%;
+    display: none;
+}
+.hero2 {
+    padding: 2rem 0;
+    background-color: var(--cor-branca);
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: -5rem;
+}
+
+.hero2 h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.hero2 p {
+    font-size: 1.5rem;
+    color: var(--cor-texto-claro);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* container */
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.container-2 .rodape-{
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+}
+.container2 .frase{
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--color-black);
+    letter-spacing: 2px;
+}
+
+.container2 .linha{
+    display: block;
+    position: absolute;
+    height: 5px; /* Espessura da linha */
+    background-color: var(--color-orange); /* Cor da linha */
+    bottom: -6px; /* Distância entre a linha e a palavra */
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+
+
+}
+
+.titulo-secao {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.destaque {
+    color: var(--cor-secundaria);
+}
+
+.texto-introducao {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--cor-texto-claro);
+}
+
+.secao-cultura {
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.secao-cultura:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.cultura-imagem {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cultura-imagem img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    display: block;
+}
+
+.cultura-imagem:hover img {
+    transform: scale(1.05);
+}
+
+.cultura-conteudo {
+    flex: 1;
+    max-width: 50%;
+}
+
+.cultura-conteudo h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.cultura-conteudo p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* GALERIA */
+.galeria {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.galeria-item {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria-legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover .galeria-legenda {
+    transform: translateY(0);
+}
+
+/* EVENTOS */
+
+.eventos {
+    margin-top: 4rem;
+}
+
+.eventos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.evento-card {
+    background-color: var(--color-black);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.evento-imagem {
+    height: 200px;
+    overflow: hidden;
+}
+
+.evento-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.evento-conteudo {
+    padding: 1.5rem;
+}
+
+.evento-data {
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.evento-titulo {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.evento-local {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+.evento-conteudo p{
+    color: var(--color-white);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-orange);
+    color: var(--color-black);
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background-color: var(--color-white);
+    
+}
+
