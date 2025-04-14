@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuItems.forEach(item => {
         item.addEventListener('click', function (e) {
             // Evita o comportamento padrão do link
-            e.preventDefault();
+            
 
             // Remove a classe 'active' de todos os itens
             document.querySelectorAll('.menu nav ul li').forEach(li => {

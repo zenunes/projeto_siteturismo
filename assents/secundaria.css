@@ -29,6 +29,52 @@ body {
     color: var(--color-black);
     background-color: var(--color-white);
 }
+/* menu de navegacao */
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-black);
+    
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100px;
+    border-bottom: 5px solid #00000000;
+    font-size: 1.6rem;
+
+}
+
+.menu li a:hover {
+    border-bottom: 5px solid var(--color-orange);
+    color: var(--color-orange);
+}
+
+
+.menu .active a{
+    border-bottom: 5px solid var(--color-orange);
+    color: var(--color-orange);
+}
+#btn-menu{
+    display: none;
+}
 
 
 /* frase com lista */
