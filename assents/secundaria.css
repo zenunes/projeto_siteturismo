@@ -101,6 +101,35 @@ right: 0;
 border-radius: 1rem;
 }
 
+/* botão rolagem */
+#back-to-top {
+    position: fixed;
+    bottom: 2vh; /* Posição relativa ao tamanho da viewport */
+    right: 1vw;
+    background-color:#FDAF2D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 10vw; /* Ajustável ao tamanho da viewport */
+    height: 10vw;
+    max-width: 50px; /* Tamanho máximo */
+    max-height: 50px;
+    min-width: 40px; /* Tamanho mínimo */
+    min-height: 40px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+#back-to-top:hover {
+    background-color:#df8d00;
+}
+#back-to-top svg {
+    width: 4rem;
+    height: 4rem;
+}
 /* header */
 .sliders-2 {
     height: 80vh;
@@ -376,3 +405,82 @@ border-radius: 1rem;
     
 }
 
+
+
+
+
+/* PAGINA GALERIA */
+
+
+.sliders-2-gallery {
+    height: 80vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    top: -10rem;
+    z-index: -1;
+}
+.container-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: -8rem;
+}
+
+.gallery-container {
+    margin-top: 4rem;
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-category {
+    display: none;
+}
+
+.gallery-category.active {
+    display: grid;
+}
