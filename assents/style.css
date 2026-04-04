@@ -1253,3 +1253,211 @@ border-radius: 1rem;
 }
 
 /* ****************** FIM ***************************** */
+
+/* =========================================== */
+/* RESPONSIVIDADE GLOBAL (MOBILE-FIRST FIXES) */
+/* =========================================== */
+@media (max-width: 1024px) {
+    .header {
+        max-width: 100%;
+        height: auto;
+        min-height: 8rem;
+        padding: 1rem 1.6rem;
+    }
+
+    .logo img {
+        width: clamp(12rem, 26vw, 18rem);
+    }
+
+    .slider--width .item-container {
+        max-width: 85%;
+    }
+
+    .slider--width .item-container h1 {
+        font-size: clamp(3.2rem, 5vw, 4.6rem);
+    }
+
+    .slider--width .item-container p {
+        font-size: clamp(1.5rem, 2.2vw, 1.8rem);
+    }
+
+    .default .section-title {
+        font-size: clamp(3rem, 6vw, 4.2rem);
+    }
+
+    .default-2 .section-containers-info-esquerda,
+    .default-2 .section-containers-info-direita {
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .default-2 .container {
+        margin-right: 0;
+    }
+
+    .default-2 .section-containers-info-direita .alinhar-direta {
+        justify-content: flex-start;
+    }
+
+    .left-title,
+    .left-desc {
+        text-align: left;
+    }
+
+    .botao-cultura,
+    .botao-paisagem,
+    .botao-culinaria {
+        justify-content: center;
+    }
+
+    .default-2 .container-right .trapezio,
+    .default-2 .container-left .trapezio {
+        clip-path: none;
+        border-radius: 0.8rem;
+        overflow: hidden;
+    }
+
+    .default-2 .container-right img,
+    .default-2 .container-left img {
+        height: auto;
+        max-height: none;
+        width: 100%;
+    }
+
+    .subtitle-bg,
+    .subtitle-bg-1 {
+        justify-content: center;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .subtitle-bg span,
+    .subtitle-bg-1 span {
+        font-size: clamp(2.8rem, 5vw, 4rem);
+        text-align: center;
+    }
+
+    .section-slide-title,
+    .section-slide .slide-subtitle {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section-slide .slide-texto .slide-title span {
+        font-size: clamp(2.4rem, 5vw, 3rem);
+    }
+
+    .slides--colection {
+        max-width: 100%;
+        height: auto;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+    }
+
+    .slides--colection .slider--colection {
+        gap: 1rem;
+    }
+
+    .slides--colection .slide--colection {
+        min-width: 70vw;
+        width: 70vw;
+        height: 24rem;
+        margin-right: 0;
+        scroll-snap-align: start;
+    }
+
+    .slides--colection .slider-controls-colection {
+        display: none;
+    }
+
+    .footer-about p {
+        padding-right: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .default,
+    .default-2 {
+        padding-bottom: 6rem;
+    }
+
+    #section-img {
+        padding-top: 6rem;
+    }
+
+    .default .section-desc,
+    .default-2 .section-body,
+    .default .section-body {
+        width: 100%;
+        min-width: 0;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+
+    .section-destaque .slide {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .atracao {
+        grid-template-columns: 1fr;
+    }
+
+    .atracao-image {
+        height: auto;
+        max-height: 28rem;
+    }
+
+    .saiba-mais-btn,
+    .botao-culinaria .saiba-mais-btn,
+    .botao-paisagem .saiba-mais-btn {
+        width: 100%;
+        max-width: 32rem;
+        text-align: center;
+        padding: 1.2rem 2rem;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .slide-fixo h1 {
+        font-size: 3.6rem;
+    }
+
+    .slide-fixo p {
+        font-size: 1.5rem;
+    }
+
+    .menu-container {
+        gap: 1rem;
+    }
+
+    .container-img {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .slides--colection .slide--colection {
+        min-width: 82vw;
+        width: 82vw;
+        height: 20rem;
+    }
+}

@@ -1,27 +1,42 @@
-document.querySelectorAll('#menu li a').forEach(link => {
-    link.addEventListener('click', function () {
-        document.querySelector('#menu li.active')?.classList.remove('active');
-        this.parentElement.classList.add('active');
-    });
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("nav");
+    const menuButton = document.getElementById("btn-menu");
+    const menuLinks = document.querySelectorAll("#menu li a");
+    const backToTopButton = document.getElementById("back-to-top");
 
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.getElementById('back-to-top');
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+            const currentActive = document.querySelector("#menu li.active");
+            if (currentActive) currentActive.classList.remove("active");
+            this.parentElement.classList.add("active");
 
-    // Mostra/esconde botão baseado no scroll
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.display = 'flex';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    });
-
-    // Ação de rolagem suave ao clicar
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+            // Fecha o menu no mobile ao navegar
+            if (nav && nav.classList.contains("actived")) {
+                nav.classList.remove("actived");
+            }
         });
     });
+
+    if (menuButton && nav) {
+        const toggleMenu = function (event) {
+            if (event.type === "touchstart") event.preventDefault();
+            nav.classList.toggle("actived");
+        };
+
+        menuButton.addEventListener("click", toggleMenu);
+        menuButton.addEventListener("touchstart", toggleMenu);
+    }
+
+    if (backToTopButton) {
+        window.addEventListener("scroll", function () {
+            backToTopButton.style.display = window.pageYOffset > 300 ? "flex" : "none";
+        });
+
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    }
 });
