@@ -334,9 +334,10 @@ border-radius: 1rem;
 
 .eventos-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    align-items: stretch;
 }
 
 .evento-card {
@@ -345,15 +346,18 @@ border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .evento-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
 }
 
 .evento-imagem {
-    height: 200px;
+    height: 220px;
     overflow: hidden;
 }
 
@@ -365,6 +369,9 @@ border-radius: 1rem;
 
 .evento-conteudo {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .evento-data {
@@ -376,6 +383,8 @@ border-radius: 1rem;
 .evento-titulo {
     font-size: 1.3rem;
     margin-bottom: 1rem;
+    color: var(--color-white);
+    min-height: 4.2rem;
 }
 
 .evento-local {
@@ -386,6 +395,7 @@ border-radius: 1rem;
 }
 .evento-conteudo p{
     color: var(--color-white);
+    min-height: 8rem;
 }
 
 .btn {
@@ -398,11 +408,35 @@ border-radius: 1rem;
     font-weight: 500;
     transition: background-color 0.3s;
     margin-top: 2rem;
+    align-self: flex-start;
 }
 
 .btn:hover {
     background-color: var(--color-white);
     
+}
+
+/* PÁGINAS DE EVENTOS */
+.evento-detalhe {
+    margin-top: 2rem;
+}
+
+.evento-detalhe .evento-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.programacao-lista {
+    margin: 1rem 0 0 1.8rem;
+    color: var(--color-white);
+}
+
+.programacao-lista li {
+    margin-bottom: 0.8rem;
+}
+
+.voltar-cultura {
+    margin-top: 2rem;
 }
 
 
@@ -679,7 +713,7 @@ border-radius: 1rem;
     }
 
     .eventos-lista {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .gallery {
@@ -705,6 +739,10 @@ border-radius: 1rem;
 
     .frase {
         font-size: 2.4rem;
+    }
+
+    .eventos-lista {
+        grid-template-columns: 1fr;
     }
 
     .galeria-grid,
@@ -739,6 +777,11 @@ border-radius: 1rem;
         text-align: center;
         min-height: 44px;
         padding: 1.1rem 1.6rem;
+    }
+
+    .evento-titulo,
+    .evento-conteudo p {
+        min-height: 0;
     }
 }
 
