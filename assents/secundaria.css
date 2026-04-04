@@ -213,23 +213,23 @@ border-radius: 1rem;
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: var(--cor-secundaria);
+    background-color: var(--color-orange);
 }
 
 .subtitulo {
     font-size: 1.5rem;
-    color: var(--cor-primaria);
+    color: var(--color-black);
     margin-bottom: 1rem;
 }
 
 .destaque {
-    color: var(--cor-secundaria);
+    color: var(--color-orange);
 }
 
 .texto-introducao {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: var(--cor-texto-claro);
+    color: var(--color-des);
 }
 
 .secao-cultura {
@@ -271,7 +271,7 @@ border-radius: 1rem;
 .cultura-conteudo h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--cor-primaria);
+    color: var(--color-black);
 }
 
 .cultura-conteudo p {

@@ -3,7 +3,7 @@ let currentSlide = 0;
 
 // configurando a largura do slide
 let btnmobile = document.getElementById('btn-menu');
-let sliderWidth = document.querySelector('.slider--width').style.width = `calc(100vw * ${totalslide}`;
+let sliderWidth = document.querySelector('.slider--width').style.width = `calc(100vw * ${totalslide})`;
 
 // ajustando a altura dos controles de slides - centralizar eles
 document.querySelector('.slider-controls-colection').style.height = `${document.querySelector('.slides--colection').clientHeight}px`;
