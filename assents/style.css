@@ -851,39 +851,57 @@ border-radius: 1rem;
     gap: 2rem;
 }
 
+.atracao-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
 .atracao-card {
     background-color: var(--color-black);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--color-des);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.atracao-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+.atracao-card-link:hover .atracao-card {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.26);
 }
 
 .atracao-image {
-    height: 200px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
 }
 
 .atracao-content{
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .atracao-title {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--color-white);
+    min-height: 4.8rem;
+    text-align: left;
 }
 
 .atracao-description {
     margin-bottom: 1rem;
     color: var(--color-white);
     font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: left;
+    min-height: 9rem;
 }
 
 .atracao-btn {
@@ -897,6 +915,8 @@ border-radius: 1rem;
     transition: background-color 0.3s;
     cursor: pointer;
     border: none;
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .atracao-btn:hover {
@@ -1418,8 +1438,12 @@ border-radius: 1rem;
     }
 
     .atracao-image {
-        height: auto;
-        max-height: 28rem;
+        height: 220px;
+    }
+
+    .atracao-title,
+    .atracao-description {
+        min-height: 0;
     }
 
     .saiba-mais-btn,
