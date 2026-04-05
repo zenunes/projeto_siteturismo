@@ -522,11 +522,13 @@ main {
 
 .sliders-2-gallery {
   height: 80vh;
-  display: flex;
+  display: block;
   overflow: hidden;
   position: relative;
   top: -10rem;
   z-index: -1;
+  margin: 0;
+  padding: 0;
 }
 .container-gallery {
   max-width: 1200px;

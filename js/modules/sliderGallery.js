@@ -1,45 +1,43 @@
 export function initSliderGallery() {
     const sliderContainer = document.querySelector('.slider--colection');
     const slidesColetion = document.querySelectorAll('.slide--colection');
+    const controls = document.querySelectorAll('.slider-controls-colection .slide-control-colection');
+    
     if (!sliderContainer || slidesColetion.length === 0) return;
 
-    let currentIndex = 0;
-
-    function updateContainerWidth() {
-        const itemWidth = slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0); const slideWidth = slidesColetion.length * itemWidth; 
-        sliderContainer.style.maxWidth = `${slideWidth}px`;
-        
-        const controlsContainer = document.querySelector('.slider-controls-colection');
-        const slidesColectionWrapper = document.querySelector('.slides--colection');
-        if (controlsContainer && slidesColectionWrapper) {
-            controlsContainer.style.height = `${slidesColectionWrapper.clientHeight}px`;
-        }
-    }
-
-    updateContainerWidth();
-    window.addEventListener('resize', updateContainerWidth);
-
-    function updateSlidePosition() {
-        sliderContainer.style.transform = `translateX(-${currentIndex * (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))}px)`;
+    function getScrollAmount() {
+        const itemWidth = slidesColetion[0].clientWidth;
+        const style = window.getComputedStyle(slidesColetion[0]);
+        const margin = parseFloat(style.marginRight) || parseFloat(style.marginLeft) || 0;
+        const gap = parseFloat(window.getComputedStyle(sliderContainer).gap) || 0;
+        return itemWidth + margin + gap;
     }
 
     function prevSlide() {
-        currentIndex--;
-        if (currentIndex < 0) currentIndex = Math.max(0, slidesColetion.length - Math.floor(sliderContainer.parentElement.clientWidth / (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))));
-        updateSlidePosition();
+        sliderContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     }
 
     function nextSlide() {
-        currentIndex++;
-        if (currentIndex > Math.max(0, slidesColetion.length - Math.floor(sliderContainer.parentElement.clientWidth / (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))))) currentIndex = 0;
-        updateSlidePosition();
+        // If we are at the end, scroll back to start
+        if (sliderContainer.scrollLeft + sliderContainer.clientWidth >= sliderContainer.scrollWidth - 10) {
+            sliderContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            sliderContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        }
     }
 
-    const controls = document.querySelectorAll('.slider-controls-colection .slide-control-colection');
     if (controls.length >= 2) {
         controls[0].addEventListener('click', prevSlide);
         controls[1].addEventListener('click', nextSlide);
     }
 
-    setInterval(nextSlide, 5000);
+    // Auto scroll setup
+    let autoScroll = setInterval(nextSlide, 5000);
+    
+    // Pause on hover
+    sliderContainer.addEventListener('mouseenter', () => clearInterval(autoScroll));
+    sliderContainer.addEventListener('mouseleave', () => {
+        clearInterval(autoScroll);
+        autoScroll = setInterval(nextSlide, 5000);
+    });
 }

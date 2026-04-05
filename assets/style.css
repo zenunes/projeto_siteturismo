@@ -776,50 +776,59 @@ border-radius: 1rem;
 .section-slide .slide-texto .slide-subtitle span#cor{
     color: var(--color-orange)
 }
-.slides--colection{
-    display: flex;
-    overflow: hidden;
+.slides--colection {
+    display: block;
+    position: relative;
     max-width: 102rem;
     margin: auto;
     height: 30rem;
-
 }
 
 .slides--colection .slider--colection {
     height: 100%;
-    transition: all ease 0.5s;
     display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
 }
 
+.slides--colection .slider--colection::-webkit-scrollbar {
+    display: none;
+}
 
 .slides--colection .slide--colection {
+    flex: 0 0 auto;
     width: 260px;
     height: 300px;
     margin-right: 2rem;
     background-size: cover;
     background-position: center;
     border-radius: 0.8rem;
-
+    scroll-snap-align: start;
 }
 
 .slides--colection .slider-controls-colection {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
     z-index: 99;
-    width: calc(4 * 25.5rem);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     opacity: 0.9;
     align-items: center;
     cursor: pointer;
+    pointer-events: none; /* Let clicks pass through except on the buttons */
 }
 
 .slides--colection .slider-controls-colection .slide-control-colection svg{
     width: 2rem;
     height: auto;
     color: var(--color-white);
-
 }
-
 
 .slides--colection .slider-controls-colection .slide-control-colection {
     width: 3rem;
@@ -827,10 +836,10 @@ border-radius: 1rem;
     background: transparent;
     display: flex;
     align-items: center;
+    pointer-events: auto;
     margin:0;
     border-radius: 10%;
     border: 2px solid var(--color-white);
-    
 }
 
 .slider-controls-colection .slide-control-colection:hover {
