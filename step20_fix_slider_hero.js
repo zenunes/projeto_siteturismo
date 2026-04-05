@@ -1,4 +1,9 @@
-export function initSliderHero() {
+const fs = require('fs');
+
+const jsPath = 'js/modules/sliderHero.js';
+
+if (fs.existsSync(jsPath)) {
+    const jsCode = `export function initSliderHero() {
     const slideItems = document.querySelectorAll('.slide--item');
     if (slideItems.length === 0) return;
 
@@ -11,10 +16,10 @@ export function initSliderHero() {
     function updateSliderContainer() {
         const viewportWidth = document.querySelector('.sliders').clientWidth;
         if(sliderWidth) {
-            sliderWidth.style.width = `${viewportWidth * totalslide}px`;
+            sliderWidth.style.width = \`\${viewportWidth * totalslide}px\`;
         }
         slideItems.forEach(item => {
-            item.style.width = `${viewportWidth}px`;
+            item.style.width = \`\${viewportWidth}px\`;
         });
     }
     updateSliderContainer();
@@ -63,7 +68,7 @@ export function initSliderHero() {
     function updateMargin() {
         const viewportWidth = document.querySelector('.sliders').clientWidth;
         let newMargin = (currentSlide * viewportWidth);
-        if(sliderWidth) sliderWidth.style.transform = `translateX(-${newMargin}px)`;
+        if(sliderWidth) sliderWidth.style.transform = \`translateX(-\${newMargin}px)\`;
         if(sliderWidth) sliderWidth.style.marginLeft = '0'; // reset old logic
     }
 
@@ -91,3 +96,21 @@ export function initSliderHero() {
     });
 
 }
+`;
+    fs.writeFileSync(jsPath, jsCode);
+}
+
+// Update CSS to handle transform
+const cssPath = 'assets/style.css';
+if (fs.existsSync(cssPath)) {
+    let css = fs.readFileSync(cssPath, 'utf-8');
+    
+    // The width of .slide--item shouldn't be forced to 100vw in CSS if JS handles it,
+    // but we can leave it as fallback. What we must fix is the horizontal scrollbar issue.
+    if (!css.includes('overflow-x: hidden;')) {
+        css = css.replace(/\.sliders\s*\{/, '.sliders {\n    overflow-x: hidden;\n    max-width: 100vw;');
+    }
+    
+    fs.writeFileSync(cssPath, css);
+}
+
