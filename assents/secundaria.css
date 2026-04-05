@@ -255,7 +255,7 @@ border-radius: 1rem;
     flex: 1;
     max-width: 50%;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     position: relative;
 }
 
@@ -301,7 +301,7 @@ border-radius: 1rem;
 }
 
 .galeria-item {
-    border-radius: 8px;
+    border-radius: 0.8rem;
     overflow: hidden;
     height: 200px;
     position: relative;
@@ -350,7 +350,7 @@ border-radius: 1rem;
 
 .evento-card {
     background-color: var(--color-black);
-    border-radius: 8px;
+    border-radius: 0.8rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -376,7 +376,7 @@ border-radius: 1rem;
 }
 
 .evento-conteudo {
-    padding: 1.5rem;
+    padding: 2.4rem;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -453,7 +453,7 @@ border-radius: 1rem;
 }
 
 .culinaria-eventos .evento-card {
-    border-radius: 10px;
+    border-radius: 0.8rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
@@ -552,7 +552,7 @@ border-radius: 1rem;
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -640,7 +640,7 @@ border-radius: 1rem;
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     transition: all 0.3s ease;
 }
 
@@ -673,8 +673,8 @@ border-radius: 1rem;
 }
 
 .info-card {
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2.4rem;
+    border-radius: 0.8rem;
     background-color: var(--color-orange);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -866,7 +866,7 @@ border-radius: 1rem;
     }
 
     .culinaria-eventos .evento-conteudo {
-        padding: 1.5rem;
+        padding: 2.4rem;
     }
 
     .culinaria-eventos .btn {

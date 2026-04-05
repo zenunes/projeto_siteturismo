@@ -17,15 +17,15 @@ html{
     --color-white:#ffffff;
     --color-section: #f2f2f2;
 
-    --font-primary: "Plus Jakarta Sans", serif;
-    --font-secondary: "Plus Jakarta Sans", serif;
-    --font-accent: "Plus Jakarta Sans", serif;
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Plus Jakarta Sans", sans-serif;
+    --font-accent: "Plus Jakarta Sans", sans-serif;
 
 }
 body {
     overflow-x: hidden;
     font-size: 1.5rem;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     
 
 }
@@ -347,11 +347,11 @@ header {
 }
 .default,
 .default-2 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
 }
 #section-img {
-    padding-top: 10rem;
+    padding-top: 12rem;
 }
 
 .default .section-title{
@@ -401,7 +401,7 @@ header {
     margin-bottom: 8rem;
 }
 .frase{
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-weight: 800;
     font-size: 2.4rem;
     color: var(--color-black);
@@ -475,9 +475,9 @@ border-radius: 1rem;
     color: #fff; /* Cor do texto */
     text-decoration: none; /* Remove sublinhado */
     background: var(--color-black); /* Gradiente de fundo */
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 0.8rem; /* Bordas arredondadas */
     transition: all 0.3s ease; /* Transição para hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sombra */
 }
 .botao-culinaria .btn-saiba-mais .icon-arrow {
     margin-left: 0.5rem; /* Espaçamento entre texto e ícone */
@@ -486,7 +486,7 @@ border-radius: 1rem;
 /* Efeito hover */
 .botao-culinaria .saiba-mais-btn:hover {
     background: var(--color-orange); /* Gradiente invertido */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12); /* Aumenta a sombra */
     color: var(--color-black);
 }
 
@@ -625,15 +625,15 @@ border-radius: 1rem;
     color: var(--color-white); /* Cor do texto */
     text-decoration: none; /* Remove sublinhado */
     background: var(--color-black); /* Gradiente de fundo */
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 0.8rem; /* Bordas arredondadas */
     transition: all 0.3s ease; /* Transição para hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sombra */
 }
 
 /* Efeito hover */
 .saiba-mais-btn:hover {
     background: var(--color-orange); /* Gradiente invertido */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12); /* Aumenta a sombra */
     color: var(--color-black);
 }
 
@@ -783,7 +783,7 @@ border-radius: 1rem;
     margin-right: 2rem;
     background-size: cover;
     background-position: center;
-    border-radius: 5px;
+    border-radius: 0.8rem;
 
 }
 
@@ -840,9 +840,9 @@ border-radius: 1rem;
     color: var(--color-black); /* Cor do texto */
     text-decoration: none; /* Remove sublinhado */
     background: var(--color-white); /* Gradiente de fundo */
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 0.8rem; /* Bordas arredondadas */
     transition: all 0.3s ease; /* Transição para hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sombra */
 }
 .botao-paisagem .btn-saiba-mais .icon-arrow {
     margin-left: 0.5rem; /* Espaçamento entre texto e ícone */
@@ -851,7 +851,7 @@ border-radius: 1rem;
 /* Efeito hover */
 .botao-paisagem .saiba-mais-btn:hover {
     background: var(--color-orange); /* Gradiente invertido */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12); /* Aumenta a sombra */
     color: var(--color-black);
 }
 
@@ -873,9 +873,9 @@ border-radius: 1rem;
 
 .atracao-card {
     background-color: var(--color-black);
-    border-radius: 10px;
+    border-radius: 0.8rem;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
@@ -884,7 +884,7 @@ border-radius: 1rem;
 
 .atracao-card-link:hover .atracao-card {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .atracao-image {
@@ -923,7 +923,7 @@ border-radius: 1rem;
     background-color: var(--color-orange);
     color: var(--color-black);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.8rem;
     font-weight: 500;
     transition: background-color 0.3s;
     cursor: pointer;
@@ -947,7 +947,7 @@ border-radius: 1rem;
 .footer {
     background-color: #1f2937; /* bg-gray-800 */
     color: white;
-    padding-top: 10rem;
+    padding-top: 12rem;
 
 }
 
@@ -1497,4 +1497,52 @@ border-radius: 1rem;
         width: 82vw;
         height: 20rem;
     }
+}
+
+/* =========================================== */
+/* GLOBAL TYPOGRAPHY REFINEMENTS               */
+/* =========================================== */
+h1, h2, h3, .right-title span, .left-title span, .slide-title span, .frase, .section-title {
+    font-family: var(--font-primary) !important;
+    font-weight: 800;
+}
+p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-introducao {
+    font-family: var(--font-secondary) !important;
+    line-height: 1.8 !important;
+}
+
+/* =========================================== */
+/* GLOBAL SPACING & MARGIN REFINEMENTS         */
+/* =========================================== */
+h1, h2, h3, .right-title span, .left-title span, .slide-title span {
+    margin-bottom: 1.6rem !important;
+}
+p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-introducao {
+    margin-bottom: 2.4rem !important;
+}
+.atracao-content {
+    padding: 2.4rem !important;
+}
+
+/* =========================================== */
+/* GLOBAL HOVER STATES                         */
+/* =========================================== */
+.saiba-mais-btn:hover, .atracao-btn:hover, .btn-secundario:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* =========================================== */
+/* FINAL HIERARCHY & COMPONENT PADDING         */
+/* =========================================== */
+.evento-conteudo { 
+    padding: 3.2rem !important; 
+}
+.right-title span, .left-title span, .section-title, .hero2 h1 {
+    font-size: clamp(3.6rem, 5vw, 5.2rem) !important;
+    line-height: 1.2 !important;
+    font-family: var(--font-primary) !important;
+}
+.hero2 p {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem) !important;
 }
