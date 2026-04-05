@@ -45,6 +45,7 @@ header {
     padding-left:1rem ;
     padding-right: 1rem;
     height: 100px;
+    box-sizing: border-box;
     margin: auto;
     display: flex;
     align-items: center;
@@ -106,6 +107,7 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     height: 100px;
+    box-sizing: border-box;
     border-bottom: 5px solid #00000000;
     font-size: 1.6rem;
 
@@ -121,8 +123,9 @@ header {
     border-bottom: 5px solid var(--color-orange);
     color: var(--color-orange);
 }
-#btn-menu{
-    
+#btn-menu {
+    display: none;
+    cursor: pointer;
 }
 
 /* SLIDERSHOW */
