@@ -144,11 +144,13 @@ main {
 /* header */
 .sliders-2 {
   height: 80vh;
-  display: flex;
+  display: block;
   overflow: hidden;
   position: relative;
   top: -10rem;
   z-index: -1;
+  margin: 0;
+  padding: 0;
 }
 .sliders-2 #bg-escuro {
   background-color: rgba(0, 0, 0, 0.8);

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -1575,4 +1576,259 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+/* =========================================================
+   NOVO LAYOUT DA HOME - SEÇÕES DE DESTAQUE (CULINÁRIA E CULTURA)
+   ========================================================= */
+.home-card-section {
+    padding: 6rem 2rem;
+    background-color: var(--color-section); /* Cor do background do site original */
+    display: flex;
+    justify-content: center;
+}
+
+.home-card {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+    gap: 4rem;
+    padding: 4rem;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.home-card-section.inverted .home-card {
+    flex-direction: row-reverse; /* Inverte a imagem e texto para o card de cultura */
+}
+
+.home-card-image {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+
+.home-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.home-card-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-orange); /* Laranja da paleta original */
+    color: var(--color-white);
+    padding: 0.6rem 1.6rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-primary);
+}
+
+.home-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home-card-subtitle {
+    display: flex;
+    align-items: center;
+    color: var(--color-orange);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-primary);
+}
+
+.home-card-subtitle .line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-orange);
+    margin-right: 1.5rem;
+}
+
+.home-card-title {
+    font-size: 4rem;
+    font-family: 'Playfair Display', var(--font-secondary), serif;
+    color: var(--color-black); /* Preto da paleta original */
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.home-card-title .highlight {
+    color: var(--color-orange);
+    font-style: italic;
+}
+
+.home-card-desc {
+    font-size: 1.6rem;
+    color: var(--color-des); /* Cor de texto da paleta original */
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-family: var(--font-primary);
+}
+
+.home-card-btn {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding: 1.4rem 3.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+}
+
+.home-card-btn:hover {
+    background-color: #e59a20; /* Tom mais escuro do laranja original para hover */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(253, 175, 45, 0.3);
+}
+
+/* --- HIGHLIGHT SECTION (MARROM) --- */
+.home-highlight-section {
+    background: linear-gradient(135deg, #425261, var(--color-black)); /* Usando a cor preta/azul escura da paleta original */
+    padding: 10rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-highlight-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight-badge {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-section);
+    padding: 0.8rem 2.4rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    font-family: var(--font-primary);
+}
+
+.highlight-title {
+    font-size: 5.6rem;
+    font-family: 'Playfair Display', var(--font-secondary), serif;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.highlight-title .highlight-text {
+    color: var(--color-orange); /* Laranja da paleta original */
+}
+
+.highlight-desc {
+    font-size: 1.8rem;
+    color: var(--color-section);
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+    max-width: 600px;
+    font-family: var(--font-primary);
+}
+
+.highlight-btn {
+    background-color: var(--color-orange); /* Laranja da paleta original */
+    color: var(--color-white);
+    padding: 1.6rem 3.6rem;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+}
+
+.highlight-btn:hover {
+    background-color: #e59a20; /* Hover escurecido da cor original */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVIDADE DO NOVO LAYOUT */
+@media (max-width: 992px) {
+    .home-card, .home-card-section.inverted .home-card {
+        flex-direction: column;
+        padding: 3rem;
+        gap: 3rem;
+    }
+    
+    .home-card-image {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .home-card-title {
+        font-size: 3.4rem;
+    }
+    
+    .highlight-title {
+        font-size: 4.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-card-section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .home-card {
+        padding: 2rem;
+        border-radius: 16px;
+    }
+    
+    .home-card-image {
+        height: 250px;
+        border-radius: 8px;
+    }
+    
+    .home-card-title {
+        font-size: 2.8rem;
+    }
+    
+    .highlight-title {
+        font-size: 3.2rem;
+    }
+    
+    .home-highlight-section {
+        padding: 6rem 1.5rem;
+    }
+    
+    .highlight-desc {
+        font-size: 1.6rem;
+    }
 }
