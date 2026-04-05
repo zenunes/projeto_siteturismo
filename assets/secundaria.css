@@ -722,7 +722,7 @@ border-radius: 1rem;
         transition: height 0.35s ease, visibility 0.35s ease;
     }
 
-    #nav.actived #menu {
+    #nav.active-menu #menu {
         height: calc(100vh - 8rem);
         visibility: visible;
         overflow-y: auto;

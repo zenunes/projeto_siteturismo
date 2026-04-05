@@ -5,7 +5,7 @@ export function initMenu() {
     const overlay = document.getElementById("menu-overlay");
 
     function closeMenu() {
-        if (nav && nav.classList.contains("actived")) nav.classList.remove("actived");
+        if (nav && nav.classList.contains("active-menu")) nav.classList.remove("active-menu");
         if (overlay && overlay.classList.contains("active")) overlay.classList.remove("active");
     }
 
@@ -21,7 +21,7 @@ export function initMenu() {
     if (menuButton && nav) {
         const toggleMenu = function (event) {
             if (event && event.type === "touchstart") event.preventDefault();
-            nav.classList.toggle("actived");
+            nav.classList.toggle("active-menu");
             if (overlay) overlay.classList.toggle("active");
         };
         menuButton.addEventListener("click", toggleMenu);

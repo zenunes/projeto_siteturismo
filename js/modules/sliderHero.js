@@ -64,4 +64,8 @@ export function initSliderHero() {
     }
 
     setInterval(goNext, 5000);
+
+    // Fix resize bug
+    window.addEventListener('resize', updateMargin);
+
 }

@@ -6,7 +6,7 @@ export function initSliderGallery() {
     let currentIndex = 0;
 
     function updateContainerWidth() {
-        const slideWidth = slidesColetion.length * 260; 
+        const itemWidth = slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0); const slideWidth = slidesColetion.length * itemWidth; 
         sliderContainer.style.maxWidth = `${slideWidth}px`;
         
         const controlsContainer = document.querySelector('.slider-controls-colection');
@@ -20,18 +20,18 @@ export function initSliderGallery() {
     window.addEventListener('resize', updateContainerWidth);
 
     function updateSlidePosition() {
-        sliderContainer.style.transform = `translateX(-${currentIndex * 260}px)`;
+        sliderContainer.style.transform = `translateX(-${currentIndex * (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))}px)`;
     }
 
     function prevSlide() {
         currentIndex--;
-        if (currentIndex < 0) currentIndex = slidesColetion.length - 4;
+        if (currentIndex < 0) currentIndex = Math.max(0, slidesColetion.length - Math.floor(sliderContainer.parentElement.clientWidth / (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))));
         updateSlidePosition();
     }
 
     function nextSlide() {
         currentIndex++;
-        if (currentIndex > slidesColetion.length - 4) currentIndex = 0;
+        if (currentIndex > Math.max(0, slidesColetion.length - Math.floor(sliderContainer.parentElement.clientWidth / (slidesColetion[0].clientWidth + parseInt(window.getComputedStyle(slidesColetion[0]).marginRight || 0))))) currentIndex = 0;
         updateSlidePosition();
     }
 
