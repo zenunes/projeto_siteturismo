@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.getElementById("btn-menu");
     const menuLinks = document.querySelectorAll("#menu li a");
     const backToTopButton = document.getElementById("back-to-top");
+    const overlay = document.getElementById("menu-overlay");
+
+    function closeMenu() {
+        if (nav && nav.classList.contains("actived")) {
+            nav.classList.remove("actived");
+        }
+        if (overlay && overlay.classList.contains("active")) {
+            overlay.classList.remove("active");
+        }
+    }
 
     menuLinks.forEach((link) => {
         link.addEventListener("click", function () {
@@ -11,9 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.parentElement.classList.add("active");
 
             // Fecha o menu no mobile ao navegar
-            if (nav && nav.classList.contains("actived")) {
-                nav.classList.remove("actived");
-            }
+            closeMenu();
         });
     });
 
@@ -21,10 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const toggleMenu = function (event) {
             if (event.type === "touchstart") event.preventDefault();
             nav.classList.toggle("actived");
+            if (overlay) overlay.classList.toggle("active");
         };
 
         menuButton.addEventListener("click", toggleMenu);
         menuButton.addEventListener("touchstart", toggleMenu);
+    }
+    
+    // Fecha o menu ao clicar fora dele (no overlay)
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
     }
 
     if (backToTopButton) {
