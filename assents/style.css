@@ -17,15 +17,15 @@ html{
     --color-white:#ffffff;
     --color-section: #f2f2f2;
 
-    --font-primary: "Plus Jakarta Sans", serif;
-    --font-secondary: "Plus Jakarta Sans", serif;
-    --font-accent: "Plus Jakarta Sans", serif;
+    --font-primary: "Merriweather", serif;
+    --font-secondary: "Plus Jakarta Sans", sans-serif;
+    --font-accent: "Plus Jakarta Sans", sans-serif;
 
 }
 body {
     overflow-x: hidden;
     font-size: 1.5rem;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     
 
 }
@@ -401,7 +401,7 @@ header {
     margin-bottom: 8rem;
 }
 .frase{
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-weight: 800;
     font-size: 2.4rem;
     color: var(--color-black);
@@ -1497,4 +1497,16 @@ border-radius: 1rem;
         width: 82vw;
         height: 20rem;
     }
+}
+
+/* =========================================== */
+/* GLOBAL TYPOGRAPHY REFINEMENTS               */
+/* =========================================== */
+h1, h2, h3, .right-title span, .left-title span, .slide-title span, .frase, .section-title {
+    font-family: var(--font-primary) !important;
+    font-weight: 800;
+}
+p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-introducao {
+    font-family: var(--font-secondary) !important;
+    line-height: 1.8 !important;
 }
