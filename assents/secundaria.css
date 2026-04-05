@@ -376,7 +376,7 @@ border-radius: 1rem;
 }
 
 .evento-conteudo {
-    padding: 1.5rem;
+    padding: 2.4rem;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -673,7 +673,7 @@ border-radius: 1rem;
 }
 
 .info-card {
-    padding: 1.5rem;
+    padding: 2.4rem;
     border-radius: 8px;
     background-color: var(--color-orange);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -866,7 +866,7 @@ border-radius: 1rem;
     }
 
     .culinaria-eventos .evento-conteudo {
-        padding: 1.5rem;
+        padding: 2.4rem;
     }
 
     .culinaria-eventos .btn {
