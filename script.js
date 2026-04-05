@@ -126,15 +126,42 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(nextSlide, 5000);
 });
 
-    function openMenu(event) {
+    function toggleMenu(event) {
         // esse if previne que o touchstart feche o menu 
-        if (event.type === 'touchstart') event.preventDefault();
+        if (event && event.type === 'touchstart') event.preventDefault();
         const nav  = document.querySelector('#nav');
+        const overlay = document.querySelector('#menu-overlay');
+        
         nav.classList.toggle('actived');
+        if (overlay) {
+            overlay.classList.toggle('active');
+        }
     }
-btnmobile.addEventListener('click', openMenu);
+
+    function closeMenu() {
+        const nav  = document.querySelector('#nav');
+        const overlay = document.querySelector('#menu-overlay');
+        
+        nav.classList.remove('actived');
+        if (overlay) {
+            overlay.classList.remove('active');
+        }
+    }
+
+btnmobile.addEventListener('click', toggleMenu);
 // o touchstart previne que o menu demore para abrir
-btnmobile.addEventListener('touchstart', openMenu);
+btnmobile.addEventListener('touchstart', toggleMenu);
+
+// Fecha o menu ao clicar fora dele (no overlay)
+const overlay = document.querySelector('#menu-overlay');
+if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+}
+
+// Fecha o menu ao clicar em qualquer link do menu
+document.querySelectorAll('.menu nav ul li a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
 
 // Função para criar o efeito de popup das section ao rolar
 window.addEventListener('load', () => {
