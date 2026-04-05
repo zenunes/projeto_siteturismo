@@ -76,7 +76,7 @@ main {
   color: var(--color-orange);
 }
 #btn-menu {
-  display: none;
+  
 }
 
 /* frase com lista */
@@ -119,11 +119,20 @@ main {
   min-width: 40px; /* Tamanho mínimo */
   min-height: 40px;
   cursor: pointer;
-  display: none; /* Inicialmente escondido */
+  
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
   z-index: 1000;
+    position: fixed !important;
+    bottom: 3rem !important;
+    right: 3rem !important;
+    z-index: 9999 !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease !important;
+    display: flex !important;
 }
 #back-to-top:hover {
   background-color: var(--color-orange);
@@ -145,7 +154,7 @@ main {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
   height: 100%;
-  display: none;
+  
 }
 .hero2 {
   padding: 2rem 0;
@@ -576,7 +585,7 @@ main {
 }
 
 .gallery-category {
-  display: none;
+  
 }
 
 .gallery-category.active {
@@ -1053,4 +1062,10 @@ main {
     .prato-conteudo {
         padding: 2.4rem;
     }
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }

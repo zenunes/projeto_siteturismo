@@ -122,7 +122,7 @@ header {
     color: var(--color-orange);
 }
 #btn-menu{
-    display: none;
+    
 }
 
 /* SLIDERSHOW */
@@ -138,13 +138,13 @@ header {
 
 }
 .slide-fixo{
-    display: none;
+    
 }
 #bg-escuro{
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
     height: 100%;
-    display: none;
+    
 }
 .slider--width {
     height: 100%;
@@ -278,11 +278,20 @@ header {
     width: 5rem;
     height: 5rem;
     cursor: pointer;
-    display: none; /* Inicialmente escondido */
+    
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
     z-index: 1000;
+    position: fixed !important;
+    bottom: 3rem !important;
+    right: 3rem !important;
+    z-index: 9999 !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease !important;
+    display: flex !important;
 }
 #back-to-top:hover {
     background-color:#df8d00;
@@ -294,7 +303,7 @@ header {
 
 /* section 1 */
 .menu-icon{
-    display: none;
+    
 }
 .menu-icon .section-body{
     max-width: 114rem;
@@ -1120,7 +1129,7 @@ border-radius: 1rem;
 
 /* ----------- SLIDE DO HERO ---------------- */
     .slider--width{
-        display: none;
+        
     }
     .sliders{
         background-image: url('img_compactado/bg2.jpg);
@@ -1148,7 +1157,7 @@ border-radius: 1rem;
     /* .menu-container, */
     .slider-indicators,
     .slider-controls{
-        display: none;
+        
     }
 
 
@@ -1200,7 +1209,7 @@ border-radius: 1rem;
         margin-left: 1rem;
     }
     .section-container-bottom{
-        display: none;
+        
     }
     
 }
@@ -1402,7 +1411,7 @@ border-radius: 1rem;
     }
 
     .slides--colection .slider-controls-colection {
-        display: none;
+        
     }
 
     .footer-about p {
@@ -1545,4 +1554,10 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 }
 .hero2 p {
     font-size: clamp(1.8rem, 2.5vw, 2.2rem) !important;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
