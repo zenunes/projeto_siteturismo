@@ -1583,13 +1583,13 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
    ========================================================= */
 .home-card-section {
     padding: 6rem 2rem;
-    background-color: #fcf9f2; /* Fundo off-white bege */
+    background-color: var(--color-section); /* Cor do background do site original */
     display: flex;
     justify-content: center;
 }
 
 .home-card {
-    background-color: #ffffff;
+    background-color: var(--color-white);
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -1626,8 +1626,8 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: #d97706; /* Laranja da paleta */
-    color: #ffffff;
+    background-color: var(--color-orange); /* Laranja da paleta original */
+    color: var(--color-white);
     padding: 0.6rem 1.6rem;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -1648,7 +1648,7 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 .home-card-subtitle {
     display: flex;
     align-items: center;
-    color: #d97706;
+    color: var(--color-orange);
     font-weight: 700;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -1660,35 +1660,35 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 .home-card-subtitle .line {
     width: 30px;
     height: 2px;
-    background-color: #d97706;
+    background-color: var(--color-orange);
     margin-right: 1.5rem;
 }
 
 .home-card-title {
     font-size: 4rem;
     font-family: 'Playfair Display', var(--font-secondary), serif;
-    color: #6d4c3d; /* Marrom terroso */
+    color: var(--color-black); /* Preto da paleta original */
     line-height: 1.1;
     margin-bottom: 2rem;
     font-weight: 700;
 }
 
 .home-card-title .highlight {
-    color: #d97706;
+    color: var(--color-orange);
     font-style: italic;
 }
 
 .home-card-desc {
     font-size: 1.6rem;
-    color: #555555;
+    color: var(--color-des); /* Cor de texto da paleta original */
     line-height: 1.6;
     margin-bottom: 3rem;
     font-family: var(--font-primary);
 }
 
 .home-card-btn {
-    background-color: #6d4c3d;
-    color: #ffffff;
+    background-color: var(--color-orange);
+    color: var(--color-white);
     padding: 1.4rem 3.2rem;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -1701,14 +1701,14 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 }
 
 .home-card-btn:hover {
-    background-color: #5c3a21;
+    background-color: #e59a20; /* Tom mais escuro do laranja original para hover */
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(109, 76, 61, 0.2);
+    box-shadow: 0 10px 20px rgba(253, 175, 45, 0.3);
 }
 
 /* --- HIGHLIGHT SECTION (MARROM) --- */
 .home-highlight-section {
-    background: linear-gradient(135deg, #8a5a44, #624230);
+    background: linear-gradient(135deg, #425261, var(--color-black)); /* Usando a cor preta/azul escura da paleta original */
     padding: 10rem 2rem;
     display: flex;
     justify-content: center;
@@ -1725,7 +1725,7 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 
 .highlight-badge {
     border: 1px solid rgba(255, 255, 255, 0.4);
-    color: #fcf9f2;
+    color: var(--color-section);
     padding: 0.8rem 2.4rem;
     border-radius: 50px;
     font-size: 1.1rem;
@@ -1739,19 +1739,19 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 .highlight-title {
     font-size: 5.6rem;
     font-family: 'Playfair Display', var(--font-secondary), serif;
-    color: #ffffff;
+    color: var(--color-white);
     line-height: 1.1;
     margin-bottom: 2.5rem;
     font-weight: 700;
 }
 
 .highlight-title .highlight-text {
-    color: #eebb66; /* Bege claro / amarelo queimado */
+    color: var(--color-orange); /* Laranja da paleta original */
 }
 
 .highlight-desc {
     font-size: 1.8rem;
-    color: #fcf9f2;
+    color: var(--color-section);
     line-height: 1.6;
     margin-bottom: 4rem;
     opacity: 0.9;
@@ -1760,8 +1760,8 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 }
 
 .highlight-btn {
-    background-color: #eebb66;
-    color: #5c3a21;
+    background-color: var(--color-orange); /* Laranja da paleta original */
+    color: var(--color-white);
     padding: 1.6rem 3.6rem;
     border-radius: 50px;
     font-size: 1.3rem;
@@ -1774,7 +1774,7 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
 }
 
 .highlight-btn:hover {
-    background-color: #f5d492;
+    background-color: #e59a20; /* Hover escurecido da cor original */
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
