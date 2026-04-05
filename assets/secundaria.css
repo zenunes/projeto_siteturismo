@@ -722,7 +722,7 @@ border-radius: 1rem;
         transition: height 0.35s ease, visibility 0.35s ease;
     }
 
-    #nav.actived #menu {
+    #nav.active-menu #menu {
         height: calc(100vh - 8rem);
         visibility: visible;
         overflow-y: auto;
@@ -801,7 +801,7 @@ border-radius: 1rem;
 @media (max-width: 768px) {
     .sliders-2,
     .sliders-2-gallery {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assents/img_compactado/bg2.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/img_compactado/bg2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
