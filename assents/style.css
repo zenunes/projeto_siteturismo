@@ -1531,3 +1531,18 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
+
+/* =========================================== */
+/* FINAL HIERARCHY & COMPONENT PADDING         */
+/* =========================================== */
+.evento-conteudo { 
+    padding: 3.2rem !important; 
+}
+.right-title span, .left-title span, .section-title, .hero2 h1 {
+    font-size: clamp(3.6rem, 5vw, 5.2rem) !important;
+    line-height: 1.2 !important;
+    font-family: var(--font-primary) !important;
+}
+.hero2 p {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem) !important;
+}
