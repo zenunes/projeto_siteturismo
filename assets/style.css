@@ -497,7 +497,7 @@ border-radius: 1rem;
 
 /* -------  NUNCA FOI TÃO FACIL--------- */
 .bg-floresta {
-    background-image: url('../image/casavermelha.png');
+    background-image: url('img_compactado/casavermelha.png');
     background-size: cover;
     background-position: bottom;
     padding: 0px;
@@ -694,7 +694,7 @@ border-radius: 1rem;
 
 /* ----------slide galeria ------------*/
 .bg-slide {
-    background-image: url('../image/casario.jpeg');
+    background-image: url('img_compactado/casario.jpeg');
     background-size: cover;
     background-position: bottom;
     padding: 0px;
@@ -1123,7 +1123,7 @@ border-radius: 1rem;
         display: none;
     }
     .sliders{
-        background-image: url(../img_compactado/bg2.jpg);
+        background-image: url('img_compactado/bg2.jpg);
         background-position: center;
     }
     #bg-escuro{

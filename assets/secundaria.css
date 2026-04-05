@@ -801,7 +801,7 @@ border-radius: 1rem;
 @media (max-width: 768px) {
     .sliders-2,
     .sliders-2-gallery {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assents/img_compactado/bg2.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/img_compactado/bg2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
