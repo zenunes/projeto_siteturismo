@@ -980,6 +980,12 @@ main {
     border: 1px solid #eaeaea;
 }
 
+
+/* Destaque Invertido (Imagem na direita) */
+.card-destaque.destaque-invertido {
+    flex-direction: row-reverse;
+}
+
 /* Grid Pratos */
 .grid-pratos {
     display: grid;
