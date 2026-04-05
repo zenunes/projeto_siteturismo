@@ -32,9 +32,11 @@ body {
 
 header {
     background: rgba(255, 255, 255, 0);
-    z-index: 1;
-    
-
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header {
@@ -59,6 +61,24 @@ header {
 }
 
 /* MENU DO HEADER */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .menu {
     flex: 1;
     display: flex;
@@ -110,12 +130,11 @@ header {
 
 /* BANNER */
 .sliders {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
-    top: -10rem;
-    z-index: -1;
+    z-index: 1;
 
 }
 .slide-fixo{
@@ -149,22 +168,19 @@ header {
 .slider-controls {
     position: absolute;
     z-index: 100;
-    height: 60vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    opacity: 0.8;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .slider-controls .slide-control svg{
     width: 2rem;
     height:auto;
     color:var(--color-white);
-    
-    
-    
+    pointer-events: none;
 }
 
 
@@ -178,7 +194,8 @@ header {
     align-items: center;    /* Centraliza no eixo vertical */
     margin: 0 1%;
     border-radius: 10%;
-    
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .slider-controls .slide-control:hover {
@@ -252,18 +269,14 @@ header {
 /* BOTÃO DE ROLAGEM */
 #back-to-top {
     position: fixed;
-    bottom: 2vh; /* Posição relativa ao tamanho da viewport */
-    right: 1vw;
+    bottom: 2rem;
+    right: 2rem;
     background-color:#FDAF2D;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 10vw; /* Ajustável ao tamanho da viewport */
-    height: 10vw;
-    max-width: 50px; /* Tamanho máximo */
-    max-height: 50px;
-    min-width: 40px; /* Tamanho mínimo */
-    min-height: 40px;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer;
     display: none; /* Inicialmente escondido */
     justify-content: center;
