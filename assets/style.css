@@ -1114,25 +1114,28 @@ border-radius: 1rem;
     /* ----------MENU HAMBURGUER------- */
     #btn-menu{
         display: block;
-        margin-right:1.5rem ;
+        margin-right: 0.5rem;
+        padding: 1rem;
         cursor: pointer;
     }
     #menu{
         display: block;
-        /* display: block; */
         position: absolute;
         width: 80%;
         top: 10rem;
         right: 0px;
         background-color: rgba(0, 0, 0, 1);
-        transition: .6s;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
         z-index: 1000;
-        height: 0;
+        height: calc(100vh - 10rem);
+        opacity: 0;
+        transform: translateY(-20px);
         visibility: hidden;
-        overflow-y:hidden ;
+        overflow-y: hidden;
     }
     #nav.active-menu #menu{
-        height: calc(100vh - 10rem);
+        opacity: 1;
+        transform: translateY(0);
         visibility: visible;
         overflow-y: auto;
     }
@@ -1239,25 +1242,28 @@ border-radius: 1rem;
     /*---------- MENU HAMBURGUER ---------*/
     #btn-menu{
         display: block;
-        margin-right:1.5rem ;
+        margin-right: 0.5rem;
+        padding: 1rem;
         cursor: pointer;
     }
     #menu{
         display: block;
-        /* display: block; */
         position: absolute;
         width: 60%;
         top: 10rem;
         right: 0px;
         background-color: rgba(0, 0, 0, 1);
-        transition: .6s;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
         z-index: 1000;
-        height: 0;
+        height: calc(100vh - 10rem);
+        opacity: 0;
+        transform: translateY(-20px);
         visibility: hidden;
-        overflow-y:hidden ;
+        overflow-y: hidden;
     }
     #nav.active-menu #menu{
-        height: calc(100vh - 10rem);
+        opacity: 1;
+        transform: translateY(0);
         visibility: visible;
         overflow-y: auto;
     }
@@ -1830,5 +1836,28 @@ p, .right-desc, .left-desc, .atracao-description, .evento-conteudo p, .texto-int
     
     .highlight-desc {
         font-size: 1.6rem;
+    }
+}
+
+/* Bloqueio de scroll no mobile */
+body.no-scroll { overflow: hidden; }
+
+/* Ajustes finos de Checklist - Mobile Pequeno */
+@media (max-width: 480px) {
+    .home-card-title {
+        font-size: 2.6rem !important;
+    }
+    .highlight-title {
+        font-size: 3.0rem !important;
+    }
+    .home-card-btn, .highlight-btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+    }
+    .home-card-content, .home-highlight-content {
+        padding-left: 1.6rem !important;
+        padding-right: 1.6rem !important;
     }
 }
