@@ -134,10 +134,12 @@ header {
 /* BANNER */
 .sliders {
     height: 100vh;
-    display: flex;
+    display: block;
     overflow: hidden;
     position: relative;
     z-index: 1;
+    margin: 0;
+    padding: 0;
 
 }
 .slide-fixo{
@@ -145,7 +147,7 @@ header {
 }
 #bg-escuro{
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100vw;
+    width: 100%;
     height: 100%;
     
 }
@@ -153,11 +155,12 @@ header {
     height: 100%;
     display: flex;
     transition: all ease 0.5s;
+    margin: 0;
+    padding: 0;
 }
 
 .slide--item {
-    flex: 1;
-    width: 100vw;
+    flex: 0 0 auto;
     height: inherit;
     background-position: center;
     background-size: cover;
@@ -172,7 +175,7 @@ header {
     position: absolute;
     z-index: 100;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -237,13 +240,13 @@ header {
 
 .slide--item .bg-escuro {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
 }
 
 .slider-indicators {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 1rem;
     display: flex;
@@ -1135,7 +1138,7 @@ border-radius: 1rem;
         
     }
     .sliders{
-        background-image: url('img_compactado/bg2.jpg);
+        background-image: url('img_compactado/bg2.jpg');
         background-position: center;
     }
     #bg-escuro{

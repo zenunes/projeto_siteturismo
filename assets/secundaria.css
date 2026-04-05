@@ -152,7 +152,7 @@ main {
 }
 .sliders-2 #bg-escuro {
   background-color: rgba(0, 0, 0, 0.8);
-  width: 100vw;
+  width: 100%;
   height: 100%;
   
 }

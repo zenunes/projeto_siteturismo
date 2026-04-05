@@ -6,15 +6,13 @@ export function initSliderHero() {
     let currentSlide = 0;
     let sliderWidth = document.querySelector('.slider--width');
     
-    // Instead of using calc(100vw * totalslide) which breaks on scrollbars,
-    // we set it dynamically based on the parent container's width.
+    // Set container width to 100% * totalslide
     function updateSliderContainer() {
-        const viewportWidth = document.querySelector('.sliders').clientWidth;
         if(sliderWidth) {
-            sliderWidth.style.width = `${viewportWidth * totalslide}px`;
+            sliderWidth.style.width = `calc(100% * ${totalslide})`;
         }
         slideItems.forEach(item => {
-            item.style.width = `${viewportWidth}px`;
+            item.style.width = `calc(100% / ${totalslide})`;
         });
     }
     updateSliderContainer();
@@ -61,9 +59,11 @@ export function initSliderHero() {
     }
 
     function updateMargin() {
-        const viewportWidth = document.querySelector('.sliders').clientWidth;
-        let newMargin = (currentSlide * viewportWidth);
-        if(sliderWidth) sliderWidth.style.transform = `translateX(-${newMargin}px)`;
+        // We translate by a percentage of the container's width.
+        // If totalslide is 4, moving 1 slide is moving 1/4 of the container = 25%.
+        // The formula is: currentSlide * (100 / totalslide) %
+        let percentage = currentSlide * (100 / totalslide);
+        if(sliderWidth) sliderWidth.style.transform = `translateX(-${percentage}%)`;
         if(sliderWidth) sliderWidth.style.marginLeft = '0'; // reset old logic
     }
 
@@ -83,11 +83,5 @@ export function initSliderHero() {
             intervalId = setInterval(goNext, 5000);
         });
     }
-
-    // Fix resize bug robustly
-    window.addEventListener('resize', () => {
-        updateSliderContainer();
-        updateMargin();
-    });
 
 }
