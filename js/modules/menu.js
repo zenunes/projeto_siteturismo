@@ -7,6 +7,7 @@ export function initMenu() {
     function closeMenu() {
         if (nav && nav.classList.contains("active-menu")) nav.classList.remove("active-menu");
         if (overlay && overlay.classList.contains("active")) overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
     }
 
     menuLinks.forEach((link) => {
@@ -23,6 +24,7 @@ export function initMenu() {
             if (event && event.type === "touchstart") event.preventDefault();
             nav.classList.toggle("active-menu");
             if (overlay) overlay.classList.toggle("active");
+            document.body.classList.toggle("no-scroll");
         };
         menuButton.addEventListener("click", toggleMenu);
         menuButton.addEventListener("touchstart", toggleMenu);

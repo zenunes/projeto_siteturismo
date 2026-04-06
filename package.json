@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "glob": "^13.0.6",
+    "jsdom": "^29.0.1",
     "puppeteer": "^24.40.0"
   }
 }
