@@ -705,10 +705,6 @@ main {
     cursor: pointer;
   }
 
-  #nav {
-    position: relative;
-  }
-
   #menu {
     display: block;
     position: absolute;
