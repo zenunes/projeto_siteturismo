@@ -31,6 +31,10 @@ body {
   flex-direction: column;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 main {
   flex: 1;
   width: 100%;
@@ -148,7 +152,7 @@ main {
   overflow: hidden;
   position: relative;
   top: -10rem;
-  z-index: -1;
+  z-index: 0;
   margin: 0;
   padding: 0;
 }
@@ -528,7 +532,7 @@ main {
   overflow: hidden;
   position: relative;
   top: -10rem;
-  z-index: -1;
+  z-index: 0;
   margin: 0;
   padding: 0;
 }
@@ -713,16 +717,17 @@ main {
     right: 0;
     background-color: rgba(0, 0, 0, 0.96);
     z-index: 1000;
-    height: 0;
+    height: calc(100vh - 8rem);
+    opacity: 0;
+    transform: translateY(-20px);
     visibility: hidden;
     overflow-y: hidden;
-    transition:
-      height 0.35s ease,
-      visibility 0.35s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
   }
 
   #nav.active-menu #menu {
-    height: calc(100vh - 8rem);
+    opacity: 1;
+    transform: translateY(0);
     visibility: visible;
     overflow-y: auto;
   }
@@ -811,8 +816,10 @@ main {
   #btn-menu {
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 0.6rem;
-    padding: 0.4rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+    cursor: pointer;
   }
 
   .frase {
